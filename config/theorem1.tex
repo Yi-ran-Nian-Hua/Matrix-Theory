@@ -1,0 +1,69 @@
+\usepackage[strict]{changepage} 
+\usepackage{framed}
+
+\definecolor{greenshade}{rgb}{0.90,1,0.92}
+\definecolor{redshade}{rgb}{1.00,0.88,0.88}
+\definecolor{brownshade}{rgb}{0.99,0.95,0.9}
+\definecolor{lilacshade}{rgb}{0.95,0.93,0.98}
+\definecolor{orangeshade}{rgb}{1.00,0.88,0.82}
+\definecolor{lightblueshade}{rgb}{0.8,0.92,1}
+\definecolor{purple}{rgb}{0.81,0.85,1}
+
+\theoremstyle{definition}
+\newtheorem{myDefn}{\indent Definition}[section]
+\newtheorem{myLemma}{\indent Lemma}[section]
+\newtheorem{myThm}[myLemma]{\indent Theorem}
+\newtheorem{myCorollary}[myLemma]{\indent Corollary}
+\newtheorem{myCriterion}[myLemma]{\indent Criterion}
+\newtheorem*{myRemark}{\indent Remark}
+\newtheorem{myProposition}{\indent Proposition}[section]
+
+\newenvironment{formal}[2][]{%
+	\def\FrameCommand{%
+		\hspace{1pt}%
+		{\color{#1}\vrule width 2pt}%
+		{\color{#2}\vrule width 4pt}%
+		\colorbox{#2}%
+	}%
+	\MakeFramed{\advance\hsize-\width\FrameRestore}%
+	\noindent\hspace{-4.55pt}%
+	\begin{adjustwidth}{}{7pt}\vspace{2pt}\vspace{2pt}}{%
+		\vspace{2pt}\end{adjustwidth}\endMakeFramed%
+}
+
+\newenvironment{defn}{%
+	\begin{formal}[Green]{greenshade}\vspace{-\baselineskip / 2}\begin{myDefn}}%
+	{\end{myDefn}\end{formal}}
+
+\newenvironment{thm}{%
+	\begin{formal}[LightSkyBlue]{lightblueshade}\vspace{-\baselineskip / 2}\begin{myThm}}%
+	{\end{myThm}\end{formal}}
+
+
+\newenvironment{lemma}{%
+	\begin{formal}[Plum]{lilacshade}\vspace{-\baselineskip / 2}\begin{myLemma}}%
+	{\end{myLemma}\end{formal}}
+
+\newenvironment{corollary}{%
+	\begin{formal}[BurlyWood]{brownshade}\vspace{-\baselineskip / 2}\begin{myCorollary}}%
+	{\end{myCorollary}\end{formal}}
+
+\newenvironment{criterion}{%
+	\begin{formal}[DarkOrange]{orangeshade}\vspace{-\baselineskip / 2}\begin{myCriterion}}%
+	{\end{myCriterion}\end{formal}}
+
+\newenvironment{rmk}{%
+	\begin{formal}[LightCoral]{redshade}\vspace{-\baselineskip / 2}\begin{myRemark}}%
+	{\end{myRemark}\end{formal}}
+
+\newenvironment{proposition}{%
+	\begin{formal}[RoyalPurple]{purple}\vspace{-\baselineskip / 2}\begin{myProposition}}%
+	{\end{myProposition}\end{formal}}
+
+
+\newtheorem{example}{\indent \color{SeaGreen}{Example}}[section]
+\renewcommand{\proofname}{\indent\textbf{\textcolor{TealBlue}{Proof}}}
+\newenvironment{solution}{\begin{proof}[\indent\textbf{\textcolor{TealBlue}{Solution}}]}{\end{proof}}
+
+% \renewenvironment{proof}{\indent\textcolor{SkyBlue}{\textbf{proof.}}\;}{\qed\par}
+% \newenvironment{solution}{\indent\textcolor{SkyBlue}{\textbf{Solution.}}\;}{\qed\par}

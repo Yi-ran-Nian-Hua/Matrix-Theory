@@ -1,0 +1,15 @@
+% English theorem environment
+\theoremstyle{definition}
+\newtheorem{defn}{\indent Definition}[section]
+
+\newtheorem{lemma}{\indent Lemma}[section]
+\newtheorem{thm}[lemma]{\indent Theorem}
+\newtheorem{corollary}[lemma]{\indent Corollary}
+\newtheorem{criterion}[lemma]{\indent Criterion}
+
+\newtheorem{proposition}{\indent Proposition}[section]
+\newtheorem{example}{\indent \color{SeaGreen}{Example}}[section]
+\theoremstyle{plain}
+\newtheorem*{rmk}{\indent Remark}
+\renewenvironment{proof}{\indent\textcolor{SkyBlue}{\textbf{Proof.}}\;}{\qed\par}
+\newenvironment{solution}{\indent\textcolor{SkyBlue}{\textbf{Solution.}}\;}{\qed\par}

@@ -1,0 +1,44 @@
+\contentsline {chapter}{\numberline {第零章\hspace {.3em}}线性代数基本知识}{1}{chapter.0}%
+\contentsline {section}{\numberline {0.1}行列式}{2}{section.0.1}%
+\contentsline {subsection}{\numberline {0.1.1}行列式的定义与计算方法}{2}{subsection.0.1.1}%
+\contentsline {subsubsection}{行列式的第一种定义}{3}{subsubsection*.2}%
+\contentsline {subsubsection}{行列式的第二种定义}{5}{subsubsection*.3}%
+\contentsline {subsubsection}{行列式的第三种定义}{5}{subsubsection*.4}%
+\contentsline {subsection}{\numberline {0.1.2}行列式的性质}{6}{subsection.0.1.2}%
+\contentsline {section}{\numberline {0.2}矩阵}{8}{section.0.2}%
+\contentsline {subsection}{\numberline {0.2.1}矩阵的运算性质}{8}{subsection.0.2.1}%
+\contentsline {subsection}{\numberline {0.2.2}矩阵的逆}{9}{subsection.0.2.2}%
+\contentsline {subsubsection}{逆矩阵的性质与重要公式}{9}{subsubsection*.5}%
+\contentsline {subsection}{\numberline {0.2.3}矩阵的伴随}{10}{subsection.0.2.3}%
+\contentsline {subsubsection}{伴随矩阵的定义}{10}{subsubsection*.6}%
+\contentsline {subsubsection}{伴随矩阵的性质与重要公式}{10}{subsubsection*.7}%
+\contentsline {subsection}{\numberline {0.2.4}初等矩阵与初等变换}{10}{subsection.0.2.4}%
+\contentsline {subsubsection}{初等变换}{10}{subsubsection*.8}%
+\contentsline {subsubsection}{初等矩阵}{11}{subsubsection*.9}%
+\contentsline {subsubsection}{行阶梯型矩阵和行最简阶梯型矩阵}{11}{subsubsection*.10}%
+\contentsline {subsubsection}{用初等变换求逆矩阵}{12}{subsubsection*.11}%
+\contentsline {subsection}{\numberline {0.2.5}矩阵的秩}{12}{subsection.0.2.5}%
+\contentsline {subsubsection}{矩阵的秩的几个重要式子}{12}{subsubsection*.12}%
+\contentsline {section}{\numberline {0.3}矩阵的秩、向量组、线性方程组}{13}{section.0.3}%
+\contentsline {subsection}{\numberline {0.3.1}向量以及向量组}{13}{subsection.0.3.1}%
+\contentsline {subsubsection}{线性相关和线性无关}{13}{subsubsection*.13}%
+\contentsline {subsubsection}{判别线性相关性的几大定理}{14}{subsubsection*.14}%
+\contentsline {subsubsection}{极大线性无关组}{14}{subsubsection*.15}%
+\contentsline {subsection}{\numberline {0.3.2}方程组}{15}{subsection.0.3.2}%
+\contentsline {subsubsection}{齐次线性方程组的结构及其解的性质}{15}{subsubsection*.16}%
+\contentsline {subsubsection}{非齐次线性方程组的结构及其解的性质}{16}{subsubsection*.17}%
+\contentsline {subsubsection}{非齐次线性方程组与齐次线性方程组的解的关系}{17}{subsubsection*.18}%
+\contentsline {section}{\numberline {0.4}特征值与特征向量、相似理论}{17}{section.0.4}%
+\contentsline {subsection}{\numberline {0.4.1}特征值与特征向量的定义}{18}{subsection.0.4.1}%
+\contentsline {subsection}{\numberline {0.4.2}求解特征值与特征向量的步骤}{18}{subsection.0.4.2}%
+\contentsline {subsection}{\numberline {0.4.3}特征值、特征向量的性质与重要结论}{18}{subsection.0.4.3}%
+\contentsline {subsubsection}{特征值的性质与重要结论}{18}{subsubsection*.20}%
+\contentsline {subsubsection}{特征向量的性质与重要结论}{18}{subsubsection*.21}%
+\contentsline {subsection}{\numberline {0.4.4}矩阵的相似理论}{19}{subsection.0.4.4}%
+\contentsline {subsubsection}{矩阵的相似}{19}{subsubsection*.22}%
+\contentsline {subsubsection}{相似矩阵的性质}{19}{subsubsection*.23}%
+\contentsline {subsubsection}{矩阵的相似对角化}{19}{subsubsection*.24}%
+\contentsline {subsubsection}{判断矩阵能否相似对角化的条件}{20}{subsubsection*.25}%
+\contentsline {section}{\numberline {0.5}结语}{20}{section.0.5}%
+\contentsline {chapter}{\numberline {第一章\hspace {.3em}}线性代数基础}{21}{chapter.1}%
+\contentsline {section}{\numberline {1.1}线性空间与子空间}{22}{section.1.1}%

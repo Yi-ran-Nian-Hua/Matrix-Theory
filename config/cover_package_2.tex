@@ -1,0 +1,12 @@
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\definecolor{innerblue}{RGB}{134,159,202}
+\definecolor{middleblue}{RGB}{213,222,236}
+\definecolor{outerblue}{RGB}{173,190,220}
+\definecolor{bggray}{RGB}{215,215,215}
+\tikzset{pics/.cd,
+	triple circle/.style={code={
+			\fill[outerblue] (4,0) circle (4);
+			\fill[middleblue] (3.1,0) circle (3.1);
+			\fill[innerblue] (2.2,0) circle (2.2);
+}}}

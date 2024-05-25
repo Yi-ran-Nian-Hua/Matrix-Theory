@@ -1,0 +1,56 @@
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage[colorlinks, linkcolor=black]{hyperref}
+\usepackage{stackengine}
+\usepackage{yhmath}
+\usepackage{extarrows}
+
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage[dvipsnames, svgnames]{xcolor}
+\usepackage{listings}
+\usepackage{subfigure}
+\usepackage{tikz}
+
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\graphicspath{ {figure/},{../figure/}, {config/}, {../config/} }
+
+\linespread{1.6}
+
+\geometry{
+    top=25.4mm, 
+    bottom=25.4mm, 
+    left=20mm, 
+    right=20mm, 
+    headheight=2.17cm, 
+    headsep=4mm, 
+    footskip=12mm
+}
+
+\setenumerate[1]{itemsep=5pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
+\setitemize[1]{itemsep=5pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
+\setdescription{leftmargin=4em,itemsep=5pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
+
+\lstset{
+    language=Mathematica,
+    basicstyle=\tt,
+    breaklines=true,
+    keywordstyle=\bfseries\color{NavyBlue}, 
+    emphstyle=\bfseries\color{Rhodamine},
+    commentstyle=\itshape\color{black!50!white}, 
+    stringstyle=\bfseries\color{PineGreen!90!black},
+    columns=flexible,
+    numbers=left,
+    numberstyle=\footnotesize,
+    frame=tb,
+    breakatwhitespace=false,
+} 

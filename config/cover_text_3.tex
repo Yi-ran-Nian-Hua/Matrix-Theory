@@ -1,0 +1,37 @@
+\renewcommand*{\maketitle}{
+    \begin{titlepage}
+        \newgeometry{margin = 0in}
+        \parindent=0pt
+        \includegraphics[width=\linewidth]{cover_package_3_jakub.jpg}
+        \vfill
+        \begin{center}
+            \parbox{0.618\textwidth}{
+                \hfill {\bfseries \Huge \thetitle} \\[0.6pt]
+                \rule{0.618\textwidth}{4pt}
+            }
+        \end{center}
+        \vfill
+        \begin{center}
+            \parbox{0.618\textwidth}{
+                \hfill\Large
+                \begin{tabular}{r|}
+                    \theauthor \\
+                    \thedate   \\
+                \end{tabular}
+            }
+        \end{center}
+        \vfill
+        \begin{center}
+            \parbox[t]{0.7\textwidth}{\centering  }
+        \end{center}
+        \vfill
+    \end{titlepage}
+    \restoregeometry
+    \thispagestyle{empty}
+}
+
+\title{\myTitle}
+\author{\myAuthor}
+\date{\myDateCover}
+\thispagestyle{empty}
+\maketitle

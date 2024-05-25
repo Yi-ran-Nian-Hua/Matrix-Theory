@@ -1,0 +1,119 @@
+\begin{tikzpicture}[remember picture,overlay]
+    \fill[tyellow] (current page.south west) rectangle (current page.north east);
+    \coordinate (start) at ($(current page.east)!0.5!(current page.north east)+(1,-1)$);
+    \coordinate (end)   at (current page.north west);
+    \foreach \i in {0,0.01,...,1}
+        {
+            \coordinate (point) at ($(start)!\i!(end)$);
+            \draw[tyellowlight]
+            ($(point)+(310*\i:6)$)--
+            ($(point)+(310*\i+120:6)$)--
+            ($(point)+(310*\i+240:6)$)--
+            ($(point)+(310*\i:6)$);
+        }
+    \coordinate (start) at (current page.south west);
+    \coordinate (end)   at (current page.east);
+    \foreach \i in {0,0.02,...,1}
+        {
+            \coordinate (point) at ($(start)!\i!(end)$);
+            \draw[tyellowlight]
+            ($(point)+(310*\i:10)$)--
+            ($(point)+(310*\i+120:10)$)--
+            ($(point)+(310*\i+240:10)$)--
+            ($(point)+(310*\i:10)$);
+        }
+    \node (title)
+    [shape=rectangle,
+        fill=tbluedark,
+        outer sep=2em,
+        inner sep=2em,
+        minimum height=12em,
+        minimum width=\paperwidth,
+        align=flush right,
+        text=white,
+        text width=0.8\paperwidth,
+        anchor=north
+    ]
+    at ($(current page.center)!0.6!(current page.north)$)
+    {
+        \fontsize{4em}{2em}
+        \fontfamily{lmss}
+        \selectfont
+        \myTitle \\
+        \fontsize{0.4em}{0.4em}
+        \fontfamily{lmss}
+        \selectfont
+        \par
+    };
+
+    \node (author)
+    [
+        fill=tblue,
+        inner sep=0.75em,
+        align=flush right,
+        text=white,
+        anchor=east,
+        yshift=-2mm
+    ]
+    at ($(title.north east)-(0.125\paperwidth,0)$)
+    {
+        \fontsize{2em}{1em}
+        \fontfamily{lmss}
+        \selectfont
+        \myAuthor \par
+    };
+    \node
+    [
+        fill=tblue,
+        inner sep=0.75em,
+        align=flush left,
+        text=tblue,
+        anchor=west,
+        xshift=-2mm,
+    ]
+    at (author.east)
+    {
+        \fontsize{2em}{1em}
+        \fontfamily{lmss}
+        \selectfont
+        \phantom{占位符占位符占位符占位符}\par
+    };
+
+    \node (subtitle)
+    [
+        text=black,
+        align=flush right,
+        anchor=north east
+    ]
+    at ($(title.south east)+(-0.14\paperwidth,0.5)$)
+    {
+        \fontsize{1.5em}{1em}
+        \fontfamily{lmss}
+        \selectfont
+        \mySubheading \par
+    };
+
+    \node (coverinfo)
+    [text=black]
+    at ($(current page.center)!0.825!(current page.south)$)
+    {
+        \fontsize{1.5em}{1em}
+        \fontfamily{lmss}
+        \selectfont
+        Revised and modernized edition by \par
+    };
+    \node
+    [text=black]
+    at ($(current page.center)!0.9!(current page.south)$)
+    {
+        \includegraphics[height=3em]{cover_package_1_texromancers.pdf}
+        \raisebox{1.1em}{
+            \fontsize{1.5em}{1em}\selectfont\TeX{}romancers\par
+        }
+    };
+    \node (coverpic)
+    at ($(title.south)!0.5!(coverinfo.north)$)
+    {
+        \includegraphics[height=21em]{cover_package_1_ci.pdf}
+    };
+\end{tikzpicture}

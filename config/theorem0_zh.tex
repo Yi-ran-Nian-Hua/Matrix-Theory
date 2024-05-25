@@ -1,0 +1,36 @@
+% 定理环境
+\usepackage{tcolorbox}
+\tcbuselibrary{most}
+\theoremstyle{definition}
+
+
+\newtheorem{proposition}{\indent 命题}[section]
+\newtheorem{example}{\indent \color{SeaGreen}{例}}[section]
+\theoremstyle{plain}
+\newtheorem*{rmk}{\indent 注}
+\renewenvironment{proof}{\indent\textcolor{SkyBlue}{\textbf{证明.}}\;}{\qed\par}
+\newenvironment{solution}{\indent\textcolor{SkyBlue}{\textbf{解.}}\;}{\qed\par}
+% #### 将 config.tex 中的定理环境的对应部分替换为如下内容
+% 定义单独编号，其他四个共用一个编号计数 这里只列举了五种，其他可类似定义（未定义的使用原来的也可）
+\newtcbtheorem[number within=section]{defn}%
+{定义}{colback=OliveGreen!10,colframe=Green!70,fonttitle=\bfseries}{def}
+
+\newtcbtheorem[number within=section]{lemma}%
+{引理}{colback=Salmon!20,colframe=Salmon!90!Black,fonttitle=\bfseries}{lem}
+
+% 使用另一个计数器 use counter from=lemma
+\newtcbtheorem[use counter from=lemma, number within=section]{them}%
+{定理}{colback=SeaGreen!10!CornflowerBlue!10,colframe=RoyalPurple!55!Aquamarine!100!,fonttitle=\bfseries}{them}
+
+\newtcbtheorem[use counter from=lemma, number within=section]{criterion}%
+{准则}{colback=green!5,colframe=green!35!black,fonttitle=\bfseries}{cri}
+
+\newtcbtheorem[use counter from=lemma, number within=section]{corollary}%
+{推论}{colback=Emerald!10,colframe=cyan!40!black,fonttitle=\bfseries}{cor}
+% colback=red!5,colframe=red!75!black
+
+% 这个颜色我不喜欢
+%\newtcbtheorem[number within=section]{proposition}%
+%{命题}{colback=red!5,colframe=red!75!black,fonttitle=\bfseries}{cor}
+
+% .... 命题 例 注 证明 解 使用之前的就可以（全文都是这种框框就很丑了），也可以按照上述定义 ...
