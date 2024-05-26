@@ -1,2 +1,0 @@
-\contentsline {chapter}{\numberline {第零章\hspace {.3em}}线性代数基础}{1}{chapter.0}%
-\contentsline {section}{\numberline {0.1}线性空间与子空间}{2}{section.0.1}%

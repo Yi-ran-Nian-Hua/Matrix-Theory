@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.25)  25 MAY 2024 21:00
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.25)  26 MAY 2024 23:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/yinyanjiang/Desktop/研一下/矩阵理论/template_r/chap1/chap
-(/Users/yinyanjiang/Desktop/研一下/矩阵理论/template_r/chap1/chap.tex
+**/Users/yinyanjiang/Desktop/研一下/矩阵理论/Matrix-Theory/chap1/chap
+(/Users/yinyanjiang/Desktop/研一下/矩阵理论/Matrix-Theory/chap1/chap.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/ctexbook.cls (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/config/ctexbackend.cfg
 File: ctexbackend.cfg 2022/07/14 v2.5.10 Backend configuration file (CTEX)
@@ -1151,30 +1151,48 @@ Package hyperref Info: Link coloring ON on input line 5.
 \@outlinefile=\write4
 \openout4 = `chap.out'.
 
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
-
 \c@lstlisting=\count386
+
 第一章
 [1
 
 
 ]
-LaTeX Font Info:    Font shape `TU/SongtiSCLight(0)/m/sl' in size <12> not available
-(Font)              Font shape `TU/SongtiSCLight(0)/m/it' tried instead on input line 26.
- [2] (./chap.aux)
-Package rerunfilecheck Info: File `chap.out' has not changed.
-(rerunfilecheck)             Checksum: 179ADD009793AE3FD214D35D0C0F3F26;209.
- )
-(\end occurred when \ifx on line 25 was incomplete) 
-Here is how much of TeX's memory you used:
- 34876 strings out of 476683
- 779948 string characters out of 5804047
- 2105875 words of memory out of 5000000
- 54542 multiletter control sequences out of 15000+600000
- 514449 words of font info for 55 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
- 98i,5n,97p,1315b,340s stack positions out of 10000i,1000n,20000p,200000b,200000s
+LaTeX Font Info:    Trying to load font information for U+msa on input line 29.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 29.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 29.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Trying to load font information for OMX+yhex on input line 29.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/yhmath/OMXyhex.fd
+File: OMXyhex.fd 
+File: OMXyhex.fd 2013/07/03 v1.1 YH's humble contribution to TeX maths (NP)
+)
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
-Output written on chap.pdf (2 pages).
+ []
+
+LaTeX Font Info:    Font shape `TU/SongtiSCLight(0)/m/sl' in size <12> not available
+(Font)              Font shape `TU/SongtiSCLight(0)/m/it' tried instead on input line 55.
+[2] [3] [4] [5] (./chap.aux)
+Package rerunfilecheck Info: File `chap.out' has not changed.
+(rerunfilecheck)             Checksum: AE04FC31900E1FF6B8750DEC5EF8E71E;545.
+ )
+(\end occurred when \ifx on line 128 was incomplete) 
+Here is how much of TeX's memory you used:
+ 35264 strings out of 476683
+ 798186 string characters out of 5804047
+ 2114875 words of memory out of 5000000
+ 54878 multiletter control sequences out of 15000+600000
+ 523631 words of font info for 99 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 98i,10n,97p,1318b,543s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on chap.pdf (5 pages).

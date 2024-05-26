@@ -42,3 +42,6 @@
 \contentsline {section}{\numberline {0.5}结语}{20}{section.0.5}%
 \contentsline {chapter}{\numberline {第一章\hspace {.3em}}线性代数基础}{21}{chapter.1}%
 \contentsline {section}{\numberline {1.1}线性空间与子空间}{22}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}线性空间}{22}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}线性空间的维数}{24}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}空间分解与维数定理}{25}{section.1.2}%

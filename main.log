@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.25)  25 MAY 2024 20:59
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.25)  26 MAY 2024 23:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/yinyanjiang/Desktop/研一下/矩阵理论/template_r/main
-(/Users/yinyanjiang/Desktop/研一下/矩阵理论/template_r/main.tex
+**/Users/yinyanjiang/Desktop/研一下/矩阵理论/Matrix-Theory/main
+(/Users/yinyanjiang/Desktop/研一下/矩阵理论/Matrix-Theory/main.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/ctexbook.cls (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/config/ctexbackend.cfg
 File: ctexbackend.cfg 2022/07/14 v2.5.10 Backend configuration file (CTEX)
@@ -1257,17 +1257,31 @@ Overfull \hbox (3.29466pt too wide) in paragraph at lines 485--486
 
 
 
-]) [22] (./main.aux (./config/cover.aux) (./chap0/chap.aux) (./chap1/chap.aux))
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 260699CD0D39A28D5942456AAB699889;2487.
+]
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
+
+ []
+
+[22] [23] [24]) [25] (./main.aux (./config/cover.aux) (./chap0/chap.aux) (./chap1/chap.aux))
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 260699CD0D39A28D5942456AAB699889;2487
+(rerunfilecheck)             After:  5B26B8F99AE06FD54166040383B49B4B;2826.
  ) 
 Here is how much of TeX's memory you used:
- 35685 strings out of 476683
- 815956 string characters out of 5804047
+ 35729 strings out of 476683
+ 818782 string characters out of 5804047
  2128846 words of memory out of 5000000
- 55227 multiletter control sequences out of 15000+600000
+ 55271 multiletter control sequences out of 15000+600000
  530159 words of font info for 139 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 98i,15n,97p,1306b,554s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,15n,97p,1309b,554s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (25 pages).
+Output written on main.pdf (28 pages).
