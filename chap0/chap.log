@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.25)  22 MAY 2024 00:11
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.25)  19 JUN 2024 22:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/yinyanjiang/Desktop/研一下/矩阵理论/template_r/chap0/chap
-(/Users/yinyanjiang/Desktop/研一下/矩阵理论/template_r/chap0/chap.tex
+**/Users/yinyanjiang/Desktop/研一下/矩阵理论/Matrix-Theory/chap0/chap
+(/Users/yinyanjiang/Desktop/研一下/矩阵理论/Matrix-Theory/chap0/chap.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/ctexbook.cls (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/config/ctexbackend.cfg
 File: ctexbackend.cfg 2022/07/14 v2.5.10 Backend configuration file (CTEX)
@@ -1245,11 +1245,11 @@ Package rerunfilecheck Info: File `chap.out' has not changed.
 (\end occurred when \ifx on line 706 was incomplete) 
 Here is how much of TeX's memory you used:
  35586 strings out of 476683
- 812594 string characters out of 5804047
- 2128873 words of memory out of 5000000
+ 812603 string characters out of 5804047
+ 2128875 words of memory out of 5000000
  55148 multiletter control sequences out of 15000+600000
  530159 words of font info for 139 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 98i,15n,97p,1315b,554s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,15n,97p,1318b,554s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on chap.pdf (23 pages).

@@ -45,3 +45,42 @@
 \contentsline {subsection}{\numberline {1.1.1}线性空间}{22}{subsection.1.1.1}%
 \contentsline {subsection}{\numberline {1.1.2}线性空间的维数}{24}{subsection.1.1.2}%
 \contentsline {section}{\numberline {1.2}空间分解与维数定理}{25}{section.1.2}%
+\contentsline {chapter}{\numberline {第二章\hspace {.3em}}向量与矩阵的范数}{26}{chapter.2}%
+\contentsline {section}{\numberline {2.1}向量的范数}{27}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}范数的直观感受}{27}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}向量范数的性质}{27}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}对向量范数三大性质的理解}{28}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}常见的向量范数}{29}{subsection.2.1.4}%
+\contentsline {subsubsection}{向量1-范数的证明与Minkovski不等式}{30}{subsubsection*.26}%
+\contentsline {subsubsection}{向量2-范数的证明与Cauchy不等式(柯西不等式)}{30}{subsubsection*.28}%
+\contentsline {subsubsection}{向量无穷范数的证明}{33}{subsubsection*.30}%
+\contentsline {subsection}{\numberline {2.1.5}向量P-范数}{33}{subsection.2.1.5}%
+\contentsline {subsubsection}{Young不等式(杨氏不等式)}{34}{subsubsection*.31}%
+\contentsline {subsubsection}{Hölder不等式}{35}{subsubsection*.32}%
+\contentsline {subsubsection}{P-范数是向量范数的证明}{37}{subsubsection*.39}%
+\contentsline {subsection}{\numberline {2.1.6}向量范数的应用}{39}{subsection.2.1.6}%
+\contentsline {subsubsection}{利用高维空间的向量范数定义低维空间的向量范数}{39}{subsubsection*.45}%
+\contentsline {subsubsection}{向量范数的等价}{41}{subsubsection*.46}%
+\contentsline {subsubsection}{利用向量范数判断向量序列的收敛性}{42}{subsubsection*.47}%
+\contentsline {section}{\numberline {2.2}矩阵的范数}{43}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}从向量范数到矩阵范数}{43}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}常见的矩阵范数}{44}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}矩阵范数的相容}{44}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}常见矩阵范数的相容性}{46}{subsection.2.2.4}%
+\contentsline {subsubsection}{矩阵1-范数的相容性}{46}{subsubsection*.48}%
+\contentsline {subsubsection}{矩阵2-范数的相容性}{48}{subsubsection*.49}%
+\contentsline {subsubsection}{矩阵无穷范数的相容性}{50}{subsubsection*.50}%
+\contentsline {subsection}{\numberline {2.2.5}酉不变范数}{51}{subsection.2.2.5}%
+\contentsline {section}{\numberline {2.3}算子范数}{51}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}向量范数与矩阵范数的相容关系}{51}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}算子范数}{52}{subsection.2.3.2}%
+\contentsline {subsubsection}{算子范数的相关定理}{54}{subsubsection*.51}%
+\contentsline {subsubsection}{矩阵范数与特征值之间的关系}{55}{subsubsection*.52}%
+\contentsline {subsection}{\numberline {2.3.3}算子范数的计算}{56}{subsection.2.3.3}%
+\contentsline {subsubsection}{算子1-范数的计算}{56}{subsubsection*.53}%
+\contentsline {subsubsection}{算子无穷范数的计算}{58}{subsubsection*.54}%
+\contentsline {subsubsection}{算子2-范数（谱范数）的计算}{60}{subsubsection*.55}%
+\contentsline {subsubsection}{谱范数的其他性质}{63}{subsubsection*.56}%
+\contentsline {section}{\numberline {2.4}酉不变范数}{65}{section.2.4}%
+\contentsline {section}{\numberline {2.5}矩阵的测度}{66}{section.2.5}%
+\contentsline {section}{\numberline {2.6}范数的应用}{67}{section.2.6}%

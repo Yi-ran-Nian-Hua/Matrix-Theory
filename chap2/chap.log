@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.25)  19 JUN 2024 09:48
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.25)  1 JUL 2024 22:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/yinyanjiang/Desktop/研一下/矩阵理论/Matrix-Theory/chap1/chap
-(/Users/yinyanjiang/Desktop/研一下/矩阵理论/Matrix-Theory/chap1/chap.tex
+**/Users/yinyanjiang/Desktop/研一下/矩阵理论/Matrix-Theory/chap2/chap
+(/Users/yinyanjiang/Desktop/研一下/矩阵理论/Matrix-Theory/chap2/chap.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/ctexbook.cls (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/config/ctexbackend.cfg
 File: ctexbackend.cfg 2022/07/14 v2.5.10 Backend configuration file (CTEX)
@@ -1151,8 +1151,11 @@ Package hyperref Info: Link coloring ON on input line 5.
 \@outlinefile=\write4
 \openout4 = `chap.out'.
 
-\c@lstlisting=\count386
 
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
+\c@lstlisting=\count386
 第一章
 [1
 
@@ -1175,24 +1178,118 @@ LaTeX Font Info:    Trying to load font information for OMX+yhex on input line 2
 File: OMXyhex.fd 
 File: OMXyhex.fd 2013/07/03 v1.1 YH's humble contribution to TeX maths (NP)
 )
-Underfull \hbox (badness 10000) in paragraph at lines 39--40
+LaTeX Font Info:    Font shape `TU/SongtiSCLight(0)/m/sl' in size <12> not available
+(Font)              Font shape `TU/SongtiSCLight(0)/m/it' tried instead on input line 53.
+ [2] [3]
+File: ../figure//平行四边形法则.png Graphic file (type bmp)
+<../figure//平行四边形法则.png>
+File: ../figure//三角形法则.png Graphic file (type bmp)
+<../figure//三角形法则.png>
+ [4]
+File: ../figure//柯西不等式.png Graphic file (type bmp)
+<../figure//柯西不等式.png>
 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[5] [6]
+Missing character: There is no ， (U+FF0C) in font [lmroman12-regular]:mapping=tex-text;!
+[7] [8]
+File: ../figure//Young不等式.png Graphic file (type bmp)
+<../figure//Young不等式.png>
+ [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19]
+File: ../figure//矩阵乘法.png Graphic file (type bmp)
+<../figure//矩阵乘法.png>
+ [20] [21] [22]
+
+LaTeX Warning: Command \textcircled invalid in math mode on input line 890.
+
+LaTeX Font Info:    Trying to load font information for OMS+lmr on input line 890.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omslmr.fd
+File: omslmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 890.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 890.
+
+
+LaTeX Warning: Command \textcircled invalid in math mode on input line 890.
+
+
+LaTeX Warning: Command \textcircled invalid in math mode on input line 890.
+
+
+LaTeX Warning: Command \textcircled invalid in math mode on input line 890.
+
+
+LaTeX Warning: Command \textcircled invalid in math mode on input line 892.
+
+
+LaTeX Warning: Command \textcircled invalid in math mode on input line 892.
+
+
+LaTeX Warning: Command \textcircled invalid in math mode on input line 892.
+
+
+LaTeX Warning: Command \textcircled invalid in math mode on input line 892.
+
+Missing character: There is no 、 (U+3001) in font [lmroman12-regular]:mapping=tex-text;!
+[23]
+
+LaTeX Warning: Command \textcircled invalid in math mode on input line 904.
+
+
+LaTeX Warning: Command \textcircled invalid in math mode on input line 904.
+
+
+LaTeX Warning: Command \textcircled invalid in math mode on input line 906.
+
+
+LaTeX Warning: Command \textcircled invalid in math mode on input line 906.
+
+
+LaTeX Warning: Command \textcircled invalid in math mode on input line 908.
+
+
+LaTeX Warning: Command \textcircled invalid in math mode on input line 908.
+
+
+LaTeX Warning: Command \textcircled invalid in math mode on input line 908.
+
+
+LaTeX Warning: Command \textcircled invalid in math mode on input line 908.
+
+
+LaTeX Warning: Command \textcircled invalid in math mode on input line 908.
+
+
+LaTeX Warning: Command \textcircled invalid in math mode on input line 908.
+
+[24] [25]
+Overfull \hbox (2.35112pt too wide) in paragraph at lines 994--995
+\TU/SongtiSCLight(0)/m/n/12 互 为 逆 矩 阵 从 而 导 出 矩 阵 相 似 的 性 质 进 行 推 导，|  将 上 面 的 两 种 情 况 合 成 在 一 起 就 是 定 理[][]\TU/lmr/m/n/12 2.2.1[][]\TU/SongtiSCLight(0)/m/n/12 中
  []
 
-LaTeX Font Info:    Font shape `TU/SongtiSCLight(0)/m/sl' in size <12> not available
-(Font)              Font shape `TU/SongtiSCLight(0)/m/it' tried instead on input line 55.
-[2] [3] [4] [5] (./chap.aux)
-Package rerunfilecheck Info: File `chap.out' has not changed.
-(rerunfilecheck)             Checksum: AE04FC31900E1FF6B8750DEC5EF8E71E;545.
- )
-(\end occurred when \ifx on line 128 was incomplete) 
-Here is how much of TeX's memory you used:
- 35264 strings out of 476683
- 798186 string characters out of 5804047
- 2114875 words of memory out of 5000000
- 54878 multiletter control sequences out of 15000+600000
- 523631 words of font info for 99 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
- 98i,10n,97p,1318b,543s stack positions out of 10000i,1000n,20000p,200000b,200000s
+[26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36]
+Missing character: There is no 😇 (U+1F607) in font [lmroman12-regular]:mapping=tex-text;!
+[37] [38] [39] [40] [41] [42] (./chap.aux)
 
-Output written on chap.pdf (5 pages).
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package rerunfilecheck Info: File `chap.out' has not changed.
+(rerunfilecheck)             Checksum: 6C8090F7AD7F0967E842602699593344;2403.
+ )
+(\end occurred when \ifx on line 1447 was incomplete) 
+Here is how much of TeX's memory you used:
+ 35470 strings out of 476683
+ 804356 string characters out of 5804047
+ 2113875 words of memory out of 5000000
+ 55056 multiletter control sequences out of 15000+600000
+ 527343 words of font info for 117 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 98i,13n,97p,1318b,593s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on chap.pdf (42 pages).
