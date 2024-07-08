@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.25)  8 JUL 2024 17:32
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.25)  9 JUL 2024 00:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1177,11 +1177,11 @@ File: OMXyhex.fd 2013/07/03 v1.1 YH's humble contribution to TeX maths (NP)
 
 ] [1] (./main.toc [1
 
-])
+] [2])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [2])
+ [3])
 \openout2 = `chap0/chap.aux'.
 
  (./chap0/chap.tex
@@ -1392,22 +1392,22 @@ Missing character: There is no 😇 (U+1F607) in font [lmroman12-regular]:mappin
 
  (./chap5/chap.tex
 第五章
-) [70
+[70
 
 
 
 
-]
+] [71] [72] [73] [74] [75] [76] [77] [78]) [79]
 \openout2 = `chap6/chap.aux'.
 
  (./chap6/chap.tex
 第六章
-[71
+[80
 
 
 
 
-] [72] [73] [74] [75] [76]
+] [81] [82] [83] [84] [85]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 143.
@@ -1620,7 +1620,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 143.
 
-[77] [78] [79] [80]
+[86] [87] [88] [89]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 230.
@@ -1837,7 +1837,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 230.
 
-[81] [82]
+[90] [91]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 272.
@@ -2262,7 +2262,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 273.
 
-[83]
+[92]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 313.
@@ -2475,7 +2475,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 313.
 
-[84] [85] [86]) [87] (./main.aux (./config/cover.aux) (./chap0/chap.aux) (./chap1/chap.aux) (./chap2/chap.aux) (./chap3/chap.aux) (./chap4/chap.aux) (./chap5/chap.aux) (./chap6/chap.aux))
+[93] [94] [95]) [96] (./main.aux (./config/cover.aux) (./chap0/chap.aux) (./chap1/chap.aux) (./chap2/chap.aux) (./chap3/chap.aux) (./chap4/chap.aux) (./chap5/chap.aux) (./chap6/chap.aux))
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
@@ -2485,16 +2485,16 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 13922CDD50FEC9743DAB28D6FEBA7271;5598
-(rerunfilecheck)             After:  367A6AE3A32025A4AFB2267FDA002E84;8385.
+(rerunfilecheck)             Before: 367A6AE3A32025A4AFB2267FDA002E84;8385
+(rerunfilecheck)             After:  A619FF0474972710B0E3DC9143D93B2B;9377.
  ) 
 Here is how much of TeX's memory you used:
- 36192 strings out of 476683
- 834635 string characters out of 5804047
- 2128846 words of memory out of 5000000
- 55674 multiletter control sequences out of 15000+600000
+ 36217 strings out of 476683
+ 835003 string characters out of 5804047
+ 2129844 words of memory out of 5000000
+ 55699 multiletter control sequences out of 15000+600000
  536283 words of font info for 164 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  98i,18n,97p,1309b,595s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (91 pages).
+Output written on main.pdf (101 pages).

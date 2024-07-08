@@ -7,7 +7,266 @@
 \else
 \fi
 \chapter{矩阵分析}
+在学习微积分的课程中，我们对于函数研究过其极限、求导、求积分等操作，能否将这些数学工具应用到矩阵中呢？这就是本章矩阵分析要干的事情。
 
+本章内容包括：
+\begin{itemize}[leftmargin=4em]
+    \item 矩阵序列与矩阵级数
+    \item 矩阵函数
+\end{itemize}
+
+\section{矩阵序列与矩阵级数}
+\subsection{矩阵序列}
+\subsubsection{从向量序列到矩阵序列}
+在第二章介绍向量范数的应用的时候，我们曾经接触过向量序列的敛散性问题：\[\lim\limits_{k\to\infty}x^{k}=\lim\limits_{k\to\infty}\Vert x^{k}-a\Vert=0\]
+也在相对应的地方介绍了何为向量序列，向量序列也是通过数列的情况延伸而来，再对向量序列进行延伸，便有了矩阵序列的概念
+\begin{defn}{矩阵序列}{}
+    设$m\times n$型矩阵序列为$\A^{(k)}$，其中\[\A^{(k)}=\begin{bmatrix}
+        a_{11}^{(k)}&a_{12}^{(k)}&\cdots&a_{1n}^{(k)}\\
+        a_{21}^{(k)}&a_{22}^{(k)}&\cdots&a_{2n}^{(k)}\\
+        \vdots&\vdots&\vdots&\vdots\\
+        a_{m1}^{(k)}&a_{m1}^{(k)}&\cdots&a_{mn}^{(k)}\\
+    \end{bmatrix},\ k=1,2,\cdots\]
+\end{defn}
+\subsubsection{矩阵序列的极限}
+与向量序列的极限类似，矩阵序列的极限定义如下：
+\begin{defn}{}{}
+    若\[\lim\limits_{k\to\infty}a^{(k)}_{ij}=a_{ij}\]则\[\lim\limits_{k\to\infty}\A^{(k)}=\A\]
+\end{defn}
+
+\subsubsection{矩阵序列极限的性质}
+\begin{them}{}{}
+    设$\lim\limits_{k\to\infty}\A^{(k)=\A}, \lim\limits_{k\to\infty}\B^{(k)=\B, \alpha, \beta\in\C}$则\begin{enumerate}
+        \item $\lim\limits_{k\to\infty}(\alpha\A^{(k)}+\beta\B^{(k)})=\alpha\A+\beta\B$
+        \item $\lim\limits_{k\to\infty}\A^{(k)}\B^{(k)}=\A\B$
+        \item 当$\A^(k)$与$\A$都可逆时，$\lim\limits_{k\to\infty}(\A^{(k)})^{-1}=\A^{-1}$
+    \end{enumerate}
+\end{them}
+下面的定理给出矩阵序列收敛条件：
+\begin{them}{}{5.1.2}
+    设$\Vert\bs{\cdot}\Vert$是$\C^{m\times n}$上任一矩阵范数，$\C^{m\times n}$中矩阵序列收敛于$\A$的充要条件是\[\lim\limits_{k\to\infty}\Vert\A^{(k)}-\A\Vert=0\]
+\end{them}
+与向量序列的收敛判断类似，定理\ref{them:5.1.2}指出了矩阵序列收敛条件，下面的定义将会指出何为收敛矩阵。
+\begin{defn}{}{}
+    设$\A\in\C^{n\times n}$，若$\lim\limits_{k\to\infty}\A^k=0(k\text{为正整数})$，则称$\A$为\textbf{收敛矩阵}.
+\end{defn}
+下面举一个例子，来表示何为收敛矩阵
+\begin{example}
+\[\A^{(k)}=\begin{bmatrix}
+    \frac{1}{2^k}&0\\
+    0&\frac{1}{2^k}
+\end{bmatrix}\]
+我们知道\[\lim\limits_{k\to\infty}\frac{1}{2^k}=0\]自然就可以推出\[\lim\limits_{k\to\infty}\A^k=0\]就代表矩阵$\A$是一个收敛矩阵。
+\end{example}
+
+下面介绍一下矩阵能够成为收敛矩阵的条件
+\begin{them}{}{}
+    设$\A\in\C^{n\times n}$，则$\A$为收敛矩阵的充要条件是谱半径$r(\A)<1$
+\end{them}
+证明如下：
+
+\begin{proof}
+    
+    充分性证明：
+
+    由$\A\in\C^{n\times n}$，再由Jordan标准型的知识可知，存在矩阵$\P$，使得\[\P^{-1}\A\P=\J=diag(J_{r_1}(\lambda_1),J_{r_2}(\lambda_2),\cdots,J_{r_s}(\lambda_s) )\]
+    
+    由矩阵乘法的知识，不难看出\[\A^k=\P\J^k\P^{-1}\]
+
+    而\[\J_{r_i}^k(\lambda_i)=\begin{bmatrix}
+        f_k(\lambda_i)&f'_k(\lambda_i)&\cdots&\frac{f^{(r_i-1)}_k(\lambda_i)}{(r_i-1)!}\\
+        &f_k(\lambda_i)&\cdots&\frac{f^{(r_i-2)}_k(\lambda_i)}{(r_i-2)!}\\
+        &&\ddots&\vdots\\
+        &&&f_k(\lambda_i)
+    \end{bmatrix}\]
+
+    其中，$f_k(\lambda_i)=\lambda_i^k$
+
+    由于$r(\A)<1$，则可以知道矩阵$\A$的所有特征值均小于1，那不难看出，当$k\to\infty$时，$f_k(\lambda_i)=\lambda_i^k\to0$, 从而$f_k^{(l)}(\lambda_i)\to0, \J_{r_i}^k(\lambda_i)\to0$
+
+    因此，$\J\to0$,故$\A\to0$，从而知道$\A$是一个收敛矩阵，充分性证毕。
+
+    必要性证明：
+
+    由于$\A^k\to0$，故$\J_{r_i}^k(\lambda_i)\to0$, 故$\lambda_i^k\to 0$，从而可以知道$\A$的所有特征值绝对值必定小于1，因此$r(\A)<1$，必要性证毕。
+\end{proof}
+\subsection{矩阵级数}
+介绍完矩阵序列，接下来介绍矩阵级数。
+
+\begin{defn}{}{}
+    设$\A^{(k)}$是$\C^{m\times n}$的矩阵序列，称\[\sum_{k=1}^{\infty}\A^{(k)}=\A^{(1)}+\A^{(2)}+\cdots+\A^{(k)}+\cdots\]为\textbf{矩阵级数}，称$\bs{S}^{(N)}=\sum\limits_{k=1}^{N}\A^{(k)}$为矩阵级数的\textbf{部分和}，如果$\lim\limits_{N\to\infty}\bs{S}^{(N)}=\bs{S}$，则称$\sum\limits_{k=1}^{\infty}\A^{(k)}$\textbf{收敛}
+\end{defn}
+
+上面的定义是从矩阵序列的角度定义的矩阵级数，接下来，与研究数项级数类似，如何判断矩阵级数绝对收敛？
+\begin{defn}{}{}
+    如果$mn$个数项级数
+    \[\sum_{k=1}^{\infty}a_{ij}^{(k)},i=1,2,\cdots,m;j=1,2,\cdots,n\]都绝对收敛，则称矩阵级数$\sum_{k=1}^{infty}\A^{(k)}$绝对收敛。
+\end{defn}
+
+上面的定义是通过数项级数绝对收敛推出矩阵级数的绝对收敛，还可以通过利用范数来确定矩阵级数是否绝对收敛：
+\begin{them}{}{}
+    在$\C^{n\times n}$中，$\sum\limits_{k=1}^{\infty}\A^{(k)}$绝对收敛的充要条件是正项级数$\sum\limits_{k=1}^{\infty}\Vert\A^{(k)}\Vert$收敛。
+\end{them}
+
+证明如下：
+
+\begin{proof}
+
+    若$\sum\limits_{k=1}^{\infty}\A^{(k)}$绝对收敛，则$\sum\limits_{k=1}^{\infty}|a_{ij}^{(k)}\leq M$
+
+    因此，根据矩阵1-范数，有\[\sum_{k=1}^{N}\Vert\A^{(k)}\Vert_{m_1}=\sum_{k=1}^{N}\left(\sum_{i=1}^{m}\sum_{j=1}^{n}|a_{ij}^{(k)}|\right)\leq mnM\]
+
+    因此，若矩阵1-范数收敛，则任意矩阵范数一定收敛（小收敛则大收敛）
+若任意矩阵范数收敛，那必定矩阵1-范数收敛，由于一定存在\[|a_{ij}^{(k)}|\leq\Vert\A^{(k)}\Vert_{m_1}\]则可以得出$\sum_{k=1}^{\infty}a_{ij}^{(k)}$绝对收敛，证毕。
+\end{proof}
+
+\subsection{矩阵幂级数}
+\begin{them}{}{Neumann定理}
+    方阵$\A$的Neumann级数\[\sum_{k=0}^{\infty}\A^k=\I+\A+\A^2+\cdots+\A^k+\cdots\]收敛的充要条件是$r(\A)<1$，且收敛时，和为$(\I-\A)^{-1}$
+\end{them}
+
+证明过程略，感兴趣的可以看书。
+
+在学习微积分的无穷级数内容中，我们知道，幂级数存在收敛半径，那矩阵幂级数的收敛半径要如何求呢？下面的定理给出了答案：
+\begin{them}{}{}
+    设幂级数\[f(\bs{z})=\sum_{k=0}^{\infty}c_k\bs{z}^k\]的收敛半径为$r$，如果方阵$\A$满足$r(\A)<r$，则矩阵幂级数绝对收敛，如果$r(\A)>r$，则矩阵幂级数发散。
+\end{them}
+\section{矩阵函数}
+上一节是为本节内容作为铺垫的，本节将会利用矩阵级数来研究矩阵函数。
+
+\subsection{函数与幂级数}
+说到函数，可能大多数人都会想到函数都是类似于下面的形式：\[f(x)=x, f(x)=x^2,\cdots\]
+
+可在最一开始说，我们将会用矩阵级数的内容来研究矩阵函数，这两者存在何种关系呢？
+
+如果还记得当时学无穷级数——函数展开成幂级数和幂级数的和函数的相关知识的话，就会知道，函数和无穷级数是离不开的，比如，你可能还记得下面这个式子：\[\sin x=x-\frac{1}{3!}x^3+\frac{1}{5!}x^5-\frac{1}{7!}x^7+\cdots\]
+
+这就建立起了一个函数与幂级数的关系，事实上，常见初等函数都可以展开成幂级数的形式，这里就不一一介绍了，具体请翻阅高等数学教材。
+
+这种幂级数与函数之间的关系放到矩阵中依旧成立，这就是为什么说用矩阵幂级数的内容来研究矩阵函数的原因，下面给出矩阵函数的定义：
+\begin{defn}{}{}
+    设幂级数$\sum\limits_{k=0}^{\infty}c_k\bs{z}^k$的收敛半径为$r$，且当$\bs{z}<r$时，幂级数收敛域$f(\bs{z})$，即\[f(\bs{z})=\sum_{l=0}^{\infty}c_k\bs{z}^k,\ \ \ |\bs{z}|<r\]
+
+    如果$\A\in\C^{n\times n}$满足$r(\A)<r$，则称收敛的矩阵幂级数$\sum\limits_{k=0}^{\infty}c_k\bs{z}^k$的和记为矩阵函数，记为$f(\A)$，即\[f(\A)=\sum_{k=0}^{\infty}c_k\A^k\]
+
+    将$f(\A)$的方阵$\A$换成$\A\bs{t}, \bs{t}$为参数，就会得到\[f(\A\bs{t})=\sum_{k=0}^{\infty}c_k(\A\bs{t})^k\]
+\end{defn}
+
+定义太长可以不看，简单来说就是定义前面的介绍，与普通的数项函数与幂级数的概念类似。
+\subsection{常见的矩阵函数}
+下面介绍了一些常见的矩阵函数，\textbf{这些函数的展开式应熟稔于心} (每天起床头件事，先背一遍展开式 (手动狗头))：
+\begin{enumerate}
+    \item \[e^{\A}=\E+\A+\frac{1}{2!}\A^2+\cdots+\frac{1}{k!}\A^k+\cdots=\sum_{k=0}^{\infty}\frac{(-1)^k}{(2k+1)!}\A^{2k+1}\]
+    \item \[\sin\A=\A-\frac{1}{3!}\A^3+\frac{1}{5!}\A^5-\frac{1}{7!}\A^7+\cdots=\sum_{k=0}^{\infty}\frac{(-1)^k}{(2k+1)!}\A^{(2k+1)}\]
+    \item \[\cos\A=\E-\frac{1}{2!}\A^2+\frac{1}{4!}\A^4-\frac{1}{6!}\A^6+\cdots=\sum_{k=0}^{\infty}\frac{(-1)^k}{(2k)!}\A^{(2k)}\]
+    \item \[(\bs{E}-\A)^{-1}=\bs{E}+\A+\A^2+\cdots+\A^k+\cdots=\sum_{k=0}^{\infty}\A^k\]
+    \item \[\ln(\bs{E}+\A)=\A-\frac{1}{2}\A^2+\frac{1}{3}\A^3-\frac{1}{4}\A^4+\cdots=\sum_{k=0}^{\infty}\frac{(-1)^k}{k+1}\A^{k+1}\]
+\end{enumerate}
+
+\subsection{矩阵函数值的计算}
+只有函数的形式还没有用，我们最终要像计算普通函数那样把矩阵函数的函数值给计算出来，有三种方法可以计算矩阵函数值。
+\subsubsection{相似对角化计算矩阵函数值}
+若矩阵$\A$可以相似对角化，则存在下面的等式\[\P^{-1}\A\P=\bs{\Lambda}=diag(\lambda_1, \lambda_2, \cdots,\lambda_n)=\D\]
+
+故\[\begin{aligned}
+    f(\A)&=\sum_{k=0}^{\infty}c_k\A^k=\sum_{k=0}^{\infty}c_k(\P\D\P^{-1})^k=\P\left(\sum_{k=0}^{\infty}c_k\D^k\right)\P^{-1}\\
+    &=\P\begin{bmatrix}
+        \sum\limits_{k=0}^{\infty}c_k\lambda_1^k&&\\
+        &\ddots&\\
+        &&\sum\limits_{k=0}^{\infty}c_k\lambda_n^k
+    \end{bmatrix}\P^{-1}
+    =\P\begin{bmatrix}
+        f(\lambda_1)&&\\
+        &\ddots&\\
+        &&f(\lambda_n)
+    \end{bmatrix}\P^{-1}
+\end{aligned}\]
+
+其中\[f(\lambda_i)=\sum_{k=0}^{\infty}c_k\lambda_i^k\]
+
+因此，使用相似对角化的方法求解矩阵函数值的步骤为：
+\begin{enumerate}[leftmargin=4em]
+    \item 将矩阵进行相似对角化
+    \item 直接代公式算答案
+\end{enumerate}
+\textbf{注意}：使用该方法前，请务必确认该矩阵是否可以相似对角化，有关相似对角化的内容，可以参考第零章相似理论的相关知识，或查阅第一章Jordan标准型的相关知识。
+
+\subsubsection{使用Jordan标准型的方式计算矩阵函数值}
+设\[\P^{-1}\A\P=\J=diag(\J_1, \J_2,\cdots,\J_s),\J_i=\begin{bmatrix}
+    \lambda_1&1&&\\
+    &\ddots&\ddots&\\
+    &&\lambda_i&1\\
+    &&&\lambda_i
+\end{bmatrix}_{m_i\times m_i}\]
+
+则\[f(\J_i)=\sum_{k=0}^{\infty}a_k\J_i^k=\begin{bmatrix}
+    f(\lambda_i)&\frac{1}{1!}f'(\lambda_i)&\cdots&\frac{1}{(m_i-1)!}f^{(m_i-1)}(\lambda_i)\\
+    &f(\lambda_i)&\cdots&\vdots\\
+    &&\ddots&\frac{1}{1!}f'(\lambda_i)\\
+    &&&f(\lambda_i)
+\end{bmatrix}\]
+
+故\[
+\begin{aligned}
+    f(\A)&=\sum_{k=0}^{\infty}a_k\P\J^k\P^{-1}=(\sum_{k=0}^{\infty}a_k\J^k)\P^{-1}\\
+    &=\P\begin{bmatrix}
+        \sum\limits_{k=0}^{\infty}a_k\J^k_1&&\\
+        &\ddots&\\
+        &&\sum\limits_{k=0}^{\infty}a_k\J^k_s
+    \end{bmatrix}\P^{-1}=\P\begin{bmatrix}
+        f(\J_1)&&\\
+        &\ddots&\\
+        &&f(\J_s)
+    \end{bmatrix}\P^{-1}
+\end{aligned}
+\]
+
+因此，使用Jordan标准型的方法求解矩阵函数值的步骤为：
+\begin{enumerate}[leftmargin=4em]
+    \item 求Jordan标准型
+    \item 代公式计算
+\end{enumerate}
+\subsubsection{使用数项级数求和方式计算矩阵函数值}
+第一种方法有局限性，第二种方法需要较大计算量，下面将要介绍的这种方法计算量不大，但是需要记住常见函数的矩阵函数展开式。
+
+在开始说计算方法之前，首先介绍哈密尔顿-凯莱定理：
+\begin{them}{哈密尔顿-凯莱定理}{}
+    设$\A$是数域$\mathbb{P} $上的一个$n\times n$矩阵，$f(\lambda)=|\lambda\bs{E}-\bs{A}|$是$\A$的特征多项式，则\[f(\A)=\A^n-b_{n-1}\A^{n-1}-\cdots-b_1\A-b_0\bs{E}=0\]
+\end{them}
+
+这个定理有什么用呢？我们继续看。
+
+由定理，我们可以得到下面的等式关系：
+\[\A^n=b_{n-1}\A^{n-1}+\cdots+b_1\A+b_0\bs{E}\]
+
+如果我们想要计算$\A^{n+1}$，那只需要计算\[\A^n\cdot\A\]的结果即可，即
+\[
+\begin{aligned}\A^{n+1}&=\A^n\A=b_0\A+b_1\A^2+\cdots+b_{n-1}\A^n
+\end{aligned}\]
+而\[\A^n=b_{n-1}\A^{n-1}+\cdots+b_1\A+b_0\bs{E}\]因此，我们重新将式子整理一下合并同类项就可以得到一个新的式子
+
+由此，我们会发现，再计算更高次的矩阵乘法时，我们完全可以用低阶矩阵乘积的结果来表示出来，从而简化了计算，这就是该定理的作用。
+
+可这对计算矩阵函数值有什么用呢？由矩阵幂级数的知识，一个矩阵函数可以写成\[f(\A)=c_0\bs{E}+c_1\A+\cdots+c_k\A^k+\cdots\]的形式，由哈密尔顿-凯莱定理，最高次项可以用低阶来表示，因此可以重新合并同类项，最终就会变成\[(c_0+c_nb_0+c_{n+1}b_0^{(1)}+\cdots)\bs{E}+(c_1+c_nb_1+c_{n+1}b_1^{(1)}+\cdots)\A+\cdots\]的形式，而\[(c_0+c_nb_0+c_{n+1}b_0^{(1)}+\cdots)\text{和}(c_1+c_nb_1+c_{n+1}b_1^{(1)}+\cdots)\]都是数项级数，因此可以使用数项级数的方式来求解矩阵函数函数值。
+
+因此，使用求解数项级数的方法求解矩阵函数值的步骤为：
+\begin{enumerate}[leftmargin=4em]
+    \item 求特征方程$|\lambda\bs{E}-\bs{A}|$的值，利用哈密尔顿-凯莱定理进行简化
+    \item 代公式计算
+\end{enumerate}
+（如果只看上面这些抽象方法肯定看不懂，因此每一个方法应该都要加一个例子的，但是时间有限并且这些例子书上都有，所以可以看书或者PPT的例子就不在这里写了，等有时间再写）
+
+\subsection{矩阵函数的其他性质}
+本节的最后，再介绍一些矩阵函数的其他性质：
+\begin{enumerate}[leftmargin=4em]
+    \item 如果$\A\B=\B\A$，则$e^{\A}e^{\B}=e^{\B}e^{\A}=e^{\A+\B}$
+    \item 如果$\A\B=\B\A$，则\begin{enumerate}
+        \item $\cos(\A+\B)=\cos\A\cos\B-\sin\A\sin\B$
+        \item $\sin(\A+\B)=\sin\A\cos\B+\cos\A\sin\B$
+    \end{enumerate}
+\end{enumerate}
+
+这些性质与代数上的性质都类似，只不过需要注意一下这些性质的成立是基于$\A\B=\B\A$的情况下才可以，其他的就没有什么需要注意的了。
 \ifx\allfiles\undefined
 \end{document}
 \fi
