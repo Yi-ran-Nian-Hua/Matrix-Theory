@@ -1,0 +1,370 @@
+\ifx\allfiles\undefined
+\documentclass[12pt, a4paper, oneside, UTF8]{ctexbook}
+\def\path{../config}
+\input{../config/_config}
+\begin{document}
+
+\else
+\fi
+\chapter{广义逆矩阵}
+在学习线性代数的时候，我们了解过矩阵逆的概念，同时我们也知道一个矩阵如果有逆矩阵，必须要满足两个条件：
+\begin{itemize}
+    \item 必须是方阵
+    \item 这个方阵的行列式不为0
+\end{itemize}
+
+我们说，如果一个矩阵满足上面的两个条件，就说该矩阵是可逆的，也就是说，存在一个矩阵$\bs{B}$，使得\[\bs{AB=BA=E}\]成立，这个时候就说矩阵$\bs{B}$是矩阵$\bs{A}$的逆矩阵，记作$\bs{A}^{-1}$。
+
+引入矩阵的逆的作用是什么呢？我们在解线性方程组$\bs{Ax=b}$的时候，如果存在矩阵$\bs{A}$的逆矩阵，那么这个线性方程组的解就唯一，即\[\bs{x}=\bs{A}^{-1}\bs{b}\]为方程组的解，这便是矩阵的逆的最大的作用——解线性方程组。
+
+可是，世界上存在的矩阵多种多样，能够满足存在逆矩阵的条件的矩阵只占很小的一部分，那这样的话求解线性方程组就没办法了吗？
+
+本章介绍广义逆矩阵，广义逆矩阵的引入就是为了解决不满足矩阵的逆的两个条件的矩阵定义逆矩阵的问题，在学习了本章之后就会发现，其实大多数的矩阵虽然没有严格的逆矩阵，但大多会存在广义逆矩阵。
+
+1995年，R.Penrose证明了，对于任何矩阵$\bs{A}\in \mathbb{C}^{m\times n}$，若存在唯一的矩阵$\bs{G}\in \mathbb{C}^{n\times m}$，同时满足下面4个方程：
+    \[\bs{AGA=A}\]
+    \[\bs{GAG=G}\]
+    \[\bs{(GA)^H=GA}\]
+    \[\bs{(AG)^H=AG}\]
+
+中的一个或几个，则将矩阵$\bs{G}$称为矩阵$\bs{A}$的\textbf{广义逆矩阵}，又叫Moore-Penrose逆(M-P逆)。
+
+本章涉及到的内容包括：
+\begin{itemize}[leftmargin=4em]
+    \item 矩阵的单边逆
+    \item 广义逆矩阵$\bs{A}^-$
+    \item 自反广义逆矩阵$\bs{A}^-_r$
+    \item M-P广义逆矩阵$\bs{A}^+$
+    \item 广义逆矩阵的应用
+\end{itemize}
+
+\section{矩阵的单边逆}
+\subsection{依旧从解方程组说起}
+我们接着就本章序言的问题讨论，假设有一个任意矩阵$\bs{A}$，假设线性方程组\[\bs{Ax=b}\]现在由于$\bs{A}$并不一定是一个可逆矩阵，因此没有办法直接采取消去的办法，采取左右两侧都乘$\bs{A}^{-1}$的方式来解方程，但事情真的到此就结束了吗？
+
+根据矩阵的乘法，或许可能存在这样的一个矩阵$\bs{B}$，使得\[\bs{BA=E}\]
+成立。
+
+这个时候，只需要在方程组左右两侧同时左乘$\bs{B}$，那这个等式就会变成\[\bs{BAx=Bb}\]
+由于$\bs{BA=E}$，因此式子就成了\[\bs{x=\bs{Bb}}\]
+
+如此，我们便在不用借助逆矩阵的情况下，依旧求出来了方程组的解，此时这个$\bs{B}$也并不是$\bs{A}$的逆，其实，并不需要一定要找到$\bs{A}$矩阵的逆，只需要找到一个矩阵$\bs{B}$使得$\bs{BA=E}$就可以了，这就是\textbf{矩阵的单边逆}。
+\begin{defn}{左逆和右逆}{def:6.1.1}
+    设$\bs{A}\in\mathbb{C}^{m\times n}$，如果有$G\in\mathbb{C}^{n\times m}$，使得\[\bs{GA=E_n}\]则称$\bs{G}$为$\bs{A}$的\textbf{左逆矩阵}，记为$\bs{G=A}_L^{-1}$.
+
+    如果\[\bs{AG=E_m}\]则称$\bs{G}$为$\bs{A}$的\textbf{右逆矩阵}，记为$\bs{G=A}_R^{-1}$.
+\end{defn}
+
+左逆和右逆的出现使得我们对于矩阵的逆的条件得以放宽，只要能够满足上式成立，依旧能够使得消去因子成立，那是所有的矩阵都存在左逆和右逆吗？请看下面的定理\ref{them:6.1.1}
+\begin{them}{左逆右逆存在的条件}{6.1.1}
+    设$\bs{A}\in\mathbb{C}^{m\times n}$，则
+    \begin{enumerate}
+        \item $\bs{A}$左可逆的充要条件是$\bs{A}$为列满秩矩阵。
+        \item $\bs{A}$右可逆的充要条件是$\bs{A}$为行满秩矩阵。
+    \end{enumerate}
+\end{them}
+
+定理\ref{them:6.1.1}的证明如下（以左可逆矩阵为例）
+
+充分性证明：
+
+由于$\bs{A}$是列满秩矩阵，因此$\bs{A}^H\bs{A}$一定是满秩$n$阶方阵，同时该矩阵可逆
+
+故存在下列等式\[(\bs{A}^H\bs{A})^{-1}(\bs{A}^H\bs{A})=\bs{E}_n\]
+
+去掉括号，有\[(\bs{A}^H\bs{A})^{-1}\bs{A}^H\bs{A}=\bs{E}_n\]
+
+此时，$(\bs{A}^H\bs{A})^{-1}\bs{A}^H$为左可逆矩阵
+
+必要性证明：
+
+由线性代数矩阵的秩的知识，有\[\text{rank}(\bs{AB}) \leq \min\{\text{rank}(\bs{A}),\text{rank}(\bs{B})\}\]
+
+由于$\bs{A}$存在左可逆矩阵，故$\bs{A}_L^{-1}\bs{A}=\bs{E}_n$
+
+因此，有\[\text{rank}(\bs{A})\geq\text{rank}(\bs{A}_L^{-1}\bs{A})=\text{rank}(\bs{E}_n)=n\]
+
+又由于$\bs{A}$的列数为n，因此由线性代数的知识可知，$\text{rank}\bs{A}\leq n$
+
+故$\text{rank}(\bs{A})=n$, 证毕。
+
+在了解了任意一个矩阵左逆右逆存在的条件后，还有下面一个推论
+\begin{corollary}{}{6.1.2}
+设$\bs{A}\in \mathbb{C}^{m\times n}$，则
+\begin{enumerate}
+    \item $\bs{A}$左可逆的充要条件为$N(\bs{A})=\{0\} $
+    \item $\bs{A}$右可逆的充要条件为$R(\bs{A})=\mathbb{C}^m$
+\end{enumerate}
+\end{corollary}
+
+这里需要解释一下$N(\bs{A})$和$R(\bs{A})$是什么：\[N(\bs{A})=\{\bs{x}|\bs{Ax=0}, \bs{x}\in \mathbb{C} ^n\}\]
+\[R(\bs{A})=\{\bs{y}|\bs{y=Ax}, \forall\bs{x}\in \mathbb{C} ^n\}\]
+
+$N(\bs{A})$叫做\textbf{核}，表示的是方程组$\bs{Ax=0}$的解空间，$R(\bs{A})$表示\textbf{值域}，同时有下面的不等关系（证明略）：\[\dim[R(\bs{A})]=\text{rank}(\bs{A})\]
+
+推论\ref{cor:6.1.2}的证明很简单：
+
+对于(1)，由于$N(\bs{A})=\{0\}$，可以得知方程组$\bs{Ax=0}$只有零解，由此可知$\bs{A}$列满秩。
+
+对于(2)，由于$R(\bs{A})=\mathbb{C}^m$，因此可知$\dim[R(\bs{A})]=\text{rank}(\bs{A})=m$，因此$\bs{A}$行满秩。
+
+\subsection{求矩阵左逆/右逆的方法}
+\subsubsection{求矩阵左逆的方法}
+在线性代数中是如何求矩阵的逆的呢？我们通过将矩阵$\bs{A}$与单位矩阵拼凑在一起，经过初等行变换，将左侧$\bs{A}$化为$\bs{E}$，那右侧的$\bs{E}$就是$\bs{A}^{-1}$了，即\[(\bs{A}\ \ \ \bs{E})\overset{\text{行}}{\rightarrow}(\bs{E}\ \ \ \bs{A}^{-1})\]
+
+上面的过程其实可以转换为\[\bs{E}_n\cdots\bs{E}_2\bs{E}_1\bs{A}=\bs{E}\]
+
+仔细看，这是不是与$\bs{A}_L^{-1}$的形式很相似，这个时候就可以把$\bs{E}_n\cdots\bs{E}_2\bs{E}_1$当做$\bs{A}_L^{-1}$。
+
+那么，上面的过程用一个严谨的公式是要如何表示呢？
+
+\[[\bs{A}\ \ \ \bs{E}]\overset{\text{行}}{\rightarrow}\begin{bmatrix}\bs{E}_n&\bs{G}\\\bs{0}&\bs{*}\end{bmatrix}\]这里的$\bs{G}$就是矩阵的左逆。
+\subsubsection{求矩阵右逆的方法}
+
+用类似求矩阵左逆的方法，只不过现在变成右乘一系列的初等矩阵(即对矩阵做初等列变换)即可求得矩阵右逆，公式如下：\[\begin{bmatrix}\bs{A}\\\bs{E}\end{bmatrix}\overset{\text{列变换}}{\rightarrow}\begin{bmatrix}\bs{E}&\bs{0}\\\bs{G}&\bs{*}\end{bmatrix}\]
+\subsection{矩阵单边逆的其他性质}
+本小节的最后一部分介绍一下矩阵单边逆的其他性质，这些性质了解即可，证明过程无需掌握，因此就不写在这里了，感兴趣的可以翻阅教材查看。
+\subsubsection{矩阵的单边逆不唯一}
+\begin{them}{}{6.1.3}
+    设$\bs{A}\in \mathbb{C}^{m\times n}$是左可逆矩阵，则\[\bs{G}=(\bs{A}_1^{-1}-\bs{B}\bs{A_2}\bs{A_1}^{-1}\ \ \ \bs{B})\bs{P}\]是$\bs{A}$的左逆矩阵，其中$\bs{B}\in \mathbb{C}^{n\times (m-n)}$为任意矩阵，行初等变换对应的矩阵$\bs{P}$满足$\bs{PA}=\begin{bmatrix}\bs{A}_1\\\bs{A_2}\end{bmatrix}$, $\bs{A}_1$是$n$阶可逆方阵。
+\end{them}
+
+\begin{them}{}{6.1.4}
+    设$\bs{A}\in \mathbb{C}^{m\times n}$是右可逆矩阵，则\[\bs{G}=\bs{Q}\begin{bmatrix}\bs{A}_1^{-1}-\bs{A}_1^{-1}\bs{A}_2\bs{D}\\\bs{D}\end{bmatrix}\]是$\bs{A}$的右逆矩阵，其中$\bs{D}\in \mathbb{C}^{(n-m)\times m}$为任意矩阵，列初等变换对应的矩阵$\bs{Q}$满足$\bs{AQ}=(\bs{A}_1\ \ \ \bs{A}_2)$, $\bs{A}_1$是$m$阶可逆方阵。
+\end{them}
+
+\subsection{矩阵单边逆与线性方程组的关系}
+\begin{them}{}{}
+    设$\bs{A}\in \mathbb{C}^{m\times n}$是左可逆矩阵，$\bs{A}_L^{-1}$是$\bs{A}$的左逆矩阵，则方程组$\bs{Ax=b}$有解的充要条件是\[(\bs{E}_m-\bs{AA}_L^{-1})\bs{b}=\bs{0}\]若等式成立，则方程组$\bs{Ax=b}$有唯一解\[\bs{x}=(\bs{A}^H\bs{A})^{-1}\bs{A}^H\bs{b}\]
+\end{them}
+\begin{them}{}{}
+    设$\bs{A}\in \mathbb{C}^{m\times n}$是右可逆矩阵，则$\bs{Ax=b}$对任何$b\in \mathbb{C}^m$都有解，若$\bs{b}\neq \bs{0}$，则方程组的解可表示为\[\bs{x=A}_R^{-1}\bs{b}\]其中，$\bs{x=A}_R^{-1}$是$\bs{A}$的一个右逆矩阵
+\end{them}
+\section{广义逆矩阵$\bs{A}^-$}
+在上一节，我们认识到了矩阵的单边逆，在本节我们继续将矩阵逆的范围进行扩大，来了解一下矩阵的广义逆$\bs{A}^-$。
+\subsection{还是从解线性方程组说起...}
+上一节的最后的两个定理指出了线性方程组有解的条件以及在有解的情况下的解是什么，可是解存在的最大的前提是矩阵的左逆或者右逆需要存在，可我们还知道，如果矩阵的左逆或者右逆存在，那必然该矩阵是行满秩或列满秩矩阵，事实上，这类的矩阵依旧并不能代表所有的矩阵，更广泛的矩阵并不一定行满秩或列满秩。
+
+由线性代数的知识，我们知道，方程组$\bs{Ax=b}$有解的充要条件是\[\text{rank}(\bs{A})=\text{rank}(\bs{A}\ \ \ \bs{b})\]
+
+如果方程组有解，那必定存在矩阵$\bs{G\in \mathbb{C}^{n\times m}}$，把解表示为\[\bs{x}=\bs{Gb}\]此时整个方程也就变为\[\bs{AGb=b}\]这个时候，矩阵$\bs{G}$就是$\bs{A}$的\textbf{广义逆矩阵}，记为$\bs{G=A}^-$。
+\begin{defn}{广义逆矩阵的定义}{6.2.1}
+    设$\bs{A}\in \C^{m\times n}$，如果存在矩阵$\G\in\C^{m\times n}$，使得\[\A\G\b=\b\ \ (\forall\b\in R(\A))\]则称$\G$为$\A$的\textbf{广义逆矩阵}，记为$\G=\A^-$
+\end{defn}
+\subsection{广义逆矩阵的性质}
+接下来介绍一些广义逆矩阵的性质
+\begin{them}{}{6.2.1}
+    设$\A\in\C^{m\times n}$，则$\A$存在广义逆矩阵的充要条件是存在$\G\in\C^{n\times m}$，使其满足\[\A\G\A=\A\]
+\end{them}
+
+\begin{proof}
+
+    充分性证明：
+
+    由于$\forall\b\in R(\A)$，因此可以知道方程$\A\x=\b$有解，不妨设解为$\bs{x}_0$
+
+    因此有$\A\bs{x}_0=\b$，同时有\[\A\G\b=\A\G\A\bs{x}_0=\A\bs{x}_0=\b\]由定义\ref{def:6.2.1}，可知$\G$为$\A$的广义逆矩阵，证毕。
+
+    必要性证明：
+
+    任取$\u\in\C^{n}$，则必定存在矩阵$\A$，使得\[\A\u=\b\in R(\A)\]因此，也一定有\[\A\G\A\u=\A\u\]
+
+    请注意到$\u$的任意性，不管$\u$取何值，一定存在\[\A\G\A=\A\]证毕。
+\end{proof}
+\subsubsection{广义逆矩阵的秩}
+\begin{corollary}{}{}
+    设$\A\in\C^{m\times n}$，且$\A^-\in\C^{n\times m}$是$\A$的一个广义逆矩阵，则\[\rank(\A^-)\geq\rank(\A)\]
+\end{corollary}
+\begin{proof}
+
+    \[\rank(\A)=\rank(\A\A^-\A)\leq \rank(\A\A^-)\leq\rank(\A^-)\]
+\end{proof}
+
+\subsubsection{广义逆矩阵的其他性质}
+\begin{them}{}{}
+    设$\A\in\C^{m\times n}, \lambda\in\C$，则
+    \begin{enumerate}
+        \item $(\A^T)^-=(\A^-)^T, (\A^H)^-=(\A^-)^H$
+        \item $\A\A^-$与$\A^-\A$都是幂等矩阵，且\[\rank(\A)=\rank(\A\A^-)=\rank(\A^-\A)\]
+        \item $\lambda^-\A^-$为$\lambda\A$的广义逆矩阵，其中$\lambda^-=\begin{cases}0,&\lambda=0\\\lambda^{-1},&\lambda\neq\end{cases}$
+        \item 设$\bs{S}$是$m$阶可逆矩阵，$\bs{T}$是$n$阶可逆矩阵，且$\B=\bs{SAT}$，则$\bs{T}^{-1}\A^-\bs{S}^{-1}$是$\B$的广义逆矩阵
+        \item $R(\A\A^-)=R(\A), N(\A^-\A)=N(\A)$
+    \end{enumerate}
+\end{them}
+
+\begin{proof}
+    
+    1 证明：
+
+    由于$\A^-$是$\A$的广义逆，因此有\[\A\A^{-1}\A=\A\]
+    两侧同时转置，有\[\A^T(\A^-)^T\A^T=\A^T\]
+
+    由定理\ref{them:6.2.1}，故\[(\A^-)^T=(\A^T)^-\]
+
+    2 证明：
+
+    \[(\A\A^-)^2=(\A\A^-\A)\A^-\]注意到\[\A\A^-\A=\A\]因此原式就变成了\[(\A\A^-)^2=\A\A^-\]这就是$\A\A^-$是幂等矩阵的原因，同理$\A^-\A$也可以用类似的方法证明。
+
+    由线性代数的知识，可以得出如下不等关系:\[\rank(\A)\geq\rank(\A\A^-)\rightarrow\A\text{是}\A\A^-\text{里的因子}\]同时还有\[\rank(\A\A^-)\geq\rank(\A\A^-\A)\rightarrow\A\A^-\text{是}\A\A^-\A\text{里的因子}\]又由于$\A\A^-\A=\A$, 因此整个的不等关系为\[\rank(\A)\geq\rank(\A\A^-)\geq\rank(\A\A^-\A)=\rank(\A)\]因此得到\[\rank(\A)=\rank(\A\A^-)\]
+
+    3 证明：
+    若$\lambda=neq0$，则有\[(\lambda\A)(\lambda^-\A^-)(\lambda\A)=(\lambda\lambda^-\lambda)\A\A^-\A\]由于$\lambda^-=\lambda^{-1}, \A\A^-\A=\A$，故原式变成了\[(\lambda\A)(\lambda^-\A^-)(\lambda\A)\lambda\A\]
+
+    若$\lambda=0$, 则有\[(\lambda\A)(\lambda^-\A^-)(\lambda\A)=0=\lambda\A\]证毕。
+
+    4 证明：
+    只需验证$\A\G\A=\A$即可，过程就不写了
+
+    5 证明：
+
+    在这里遇到了需要证明两个集合相等的问题，或者说要证明两个空间相等的问题，解决这种问题的思路分成以下两步：\begin{itemize}
+        \item 首先证明左侧或右侧的集合包含在对侧的集合中，如果集合相等那也一定存在集合包含关系，只不过是互相包含罢了。
+        \item 之后证明空间的维数相等即可。
+    \end{itemize}
+
+对于$R(\A\A^-)$与$R(\A)$，显然有\[R(\A\A^-)\subseteq R(\A)\]同时我们还有\[\rank(\A\A^-)=\rank(\A)\]因此可以得出$R(\A\A^-)=R(\A)$
+
+对于$N(\A\A^-)$与$N(\A)$，有\[N(\A)\subseteq N(\A\A^-)\]依旧根据\[\rank(\A\A^-)=\rank(\A)\]得到了两个集合相等，证毕。
+\end{proof}
+
+\section{自反广义逆矩阵$\A_r^{-1}$}
+何为自反广义逆矩阵呢？在学习线性代数逆矩阵的时候，有这样一条已经熟知的性质：\[(\A^{-1})^{-1}=\A\]这叫做逆矩阵的自反性质，可这样的性质在广义逆矩阵中还成立吗？
+
+假设有矩阵$\A^-=\bs{0},\bs{0}^-=\bs{E}$，那$(\A^-)^-=(\bs{0})^-=\bs{0}^-=\bs{E}\neq \A$，通过这个小例子就知道了广义逆矩阵并不一定具有自反性。
+
+\subsection{自反广义逆矩阵的定义}
+\begin{defn}{}{6.3.1}
+    设$\A\in\C^{m\times n}$, 如果有$\G\in\C^{n\times m}$，使得\[\A\G\A=\A, \G\A\G=\G\]同时成立，则称$\G$为$\A$的\textbf{自反广义逆矩阵}。
+\end{defn}
+
+根据定义可以看到，自反广义逆矩阵在广义逆矩阵的前提下又增加了$\G\A\G=\G$的条件，是所有的矩阵都拥有自反广义逆矩阵吗？在下面的定理中给出了答案（证明略）
+\begin{them}{}{}
+    任何矩阵都有自反广义逆矩阵。
+\end{them}
+
+\begin{them}{}{}
+    设$\X,\Y\in\C^{n\times m}$均为$\A\in\C^{m\times n}$的广义逆矩阵，则\[\Z=\X\A\Y\]是$\A$的自反广义逆矩阵。
+\end{them}
+
+除此之外，如何判断一个广义逆矩阵是自反广义逆矩阵呢？请看下面的定理
+\begin{them}{}{6.3.3}
+    $\A\in\C^{m\times n}, \A^-$是$\A$的广义逆矩阵，则$\A^-$是$\A$的自反广义逆矩阵的充要条件是\[\rank(\A)=\rank(\A^-)\]
+\end{them}
+定理\ref{them:6.3.3}从矩阵的秩的角度表明了一个广义逆矩阵如何成为自反广义逆矩阵的条件，证明如下：
+
+\begin{proof}
+
+    必要性证明：
+
+    因为$\A^-$是自反广义逆矩阵，根据自反广义逆矩阵，有\[\A\A^-\A=\A, \A^-\A\A^-=\A^-\]
+
+    由前半段，可知$\rank(\A^-)\geq\rank(\A)$
+
+    由后半段，可知$\rank(\A^-)\leq\rank(\A)$
+
+    所以$\rank(\A^-)=\rank(\A)$
+
+    充分性证明：
+
+    //TODO(懒得写了！)
+\end{proof}
+
+\section{M-P广义逆矩阵$\A^+$}
+\subsection{$\A^+$及其性质}
+本节课继续介绍另外一种广义逆矩阵：M-P广义逆矩阵$\A^+$。
+\begin{defn}{}{6.4.1}
+    设$\A\in\C^{m\times n}$, 如果有$\G\in\C^{n\times m}$，使得\[\A\G\A=\A, \G\A\G=\G, (\A\G)^H=\A\G, (\G\A)^H=\G\A\]则称$\G$是$\A$的\textbf{M-P广义逆矩阵}，记为$\G=A^+$.
+\end{defn}
+
+定义\ref{def:6.4.1}只是说明$A^+$的性质，并没有告诉计算方式，如何计算$A^+$? 请看下面的定理：
+\begin{them}{}{6.4.1}
+    设$\A\in\C_r^{m\times n}, \A=\B\D$是$\A$的最大秩分解，则\[\A^+=\G=\D^H(\D\D^H)^{-1}(\B^H\B)^{-1}\B^H\]
+\end{them}
+如何证明该定理的合理性呢？只需要验证定义\ref{def:6.4.1}的四个等式即可。
+
+如果留意前面的单边逆、广义逆和自反广义逆矩阵，会发现大多数矩阵的单边逆、广义逆和自反广义逆并不一定是唯一的，下面的定理给出了$\A^+$的唯一性。
+\begin{them}{}{6.4.2}
+    设$\A\in\C^{m\times n}$，则$\A^+$是唯一的。
+\end{them}
+
+证明过程可以不用理解，感兴趣可以查阅教材。
+
+\subsubsection{$\A^+$的性质}
+\begin{them}{}{}
+    设$\A\in\C^{m\times n}$，则有
+    \begin{enumerate}
+        \item $(\A^+)^+=\A$
+        \item $(\A^T)^+=(\A^+)^T, (\A^H)^+=(\A^+)^H$
+        \item $\A^+=(\A^H\A)^+\A^H=\A^H(\A^H\A)^+$
+        \item $R(\A^+)=r(\A^H)$
+        \item $\A\A^+=P_{R(\A)}, \A^+\A=P_{R(A^H)}$
+        \item $R(\A)=R(\A^H)\Leftrightarrow \A\A^+=\A^+\A$
+    \end{enumerate}
+\end{them}
+
+如果对证明过程感兴趣，可以翻阅教材查看。
+
+除此之外，还有最后一个关于$\A^+$的性质:
+\begin{them}{}{}
+    设$\A\in\C^{m\times l}, \B\in\C^{l\times n}$，则\[(\A\B)^+=\B^+\A^+\Leftrightarrow\begin{cases}R(\A^H\A\B)\subseteq R(\B)\\R(\B\B^H\A^H)\subseteq 
+     R(\A^H)\end{cases}\]
+\end{them}
+
+\subsection{计算$\A^+$的方法}
+\subsubsection{最大秩分解法}
+用最大秩分解的方式计算$\A^+$就是前面的定理\ref{them:6.4.1}，这里不再赘述，但下面这一条计算$\A^+$的方式需要了解一下：
+\begin{lemma}{}{}
+    设$\A\in\C^{m\times n}$，则\begin{enumerate}
+        \item 如果$\A$是行满秩矩阵，则$\A^+=\A^H(\A\A^H)^{-1}$
+        \item 如果$\A$是列满秩矩阵，则$\A^+=(\A^H\A)^{-1}\A^H$
+    \end{enumerate}
+\end{lemma}
+\subsubsection{奇异值分解法}
+\begin{them}{}{}
+    设$\A\in\C_r^{m\times n}$的奇异值分解为
+    \[\A=\U
+    \begin{bmatrix}
+        \D_r&\bs{0}\\
+        \bs{0}&\bs{0}
+    \end{bmatrix}\V\]
+    则有\begin{enumerate}
+        \item $\A^+=\V^H\D^+\U^H$
+        \item $\Vert\A^+\Vert_F^2=\sum\limits_{i=1}^{r}\frac{1}{\sigma_i^2}$
+        \item $\Vert\A^+\Vert^2=\frac{1}{\min\limits_{i\leq i\leq r}\sigma_i}$
+    \end{enumerate}
+\end{them}
+\begin{proof}
+    看看书上或者PPT的证明吧，再也不想证明了。。。
+\end{proof}
+
+\section{广义逆矩阵的应用}
+最后，介绍一下广义逆矩阵在解方程方面的应用。
+\subsection{广义逆矩阵在解矩阵方程上的应用}
+\begin{them}{}{}
+    设$\A\in\C^{m\times n}, \B\in\C^{p\times q}, \D\in\C^{m\times q}$，则矩阵方程\[\A\X\B=\D\]有解的充要条件是存在$\A^-\text{和}\B^-$，使得\[\A\A^-\D\B^-\B=\D\]成立，在有解的条件下，矩阵方程$\A\X\B=\D$的通解为\[\X=\A^-\D\B^-+\Y-\A^-\A\Y\B\B^-,\ \ \ \forall\Y\in\C^{n\times p}\]
+\end{them}
+
+在此基础上堆式子进行变形，就产生了下面的两个推论
+\begin{corollary}{}{}
+    设$\A\in\C^{m\times n}, \D\in\C^{m\times p}$，则矩阵方程\[\A\X=\D\]有解的充要条件是存在$\A^-$，使得\[\A\A^-\D=\D\]成立，在有解的条件下，矩阵方程$\A\X=\D$的通解为\[\X=\A^-\D+\Y-\A\A^-\Y,\ \ \ \forall\Y\in\C^{n\times p}\]
+\end{corollary}
+\begin{corollary}{}{}
+    设$\B\in\C^{m\times n}, \D\in\C^{p\times n}$，则矩阵方程\[\X\B=\D\]有解的充要条件是存在$\B^-$，使得\[\D\B^-\B=\D\]成立，在有解的条件下，矩阵方程$\X\B=\D$的通解为\[\X=\D\B^-+\Y-\Y\B\B^-,\ \ \ \forall\Y\in\C^{p\times m}\]
+\end{corollary}
+
+\subsection{广义逆矩阵在解线性方程组上的应用}
+\begin{corollary}{}{}
+    设$\A\in\C^{m\times n}, \b\in\C^m$，则方程组$\A\x=\b$有解的充要条件是存在$\A^-$，使得\[\A\A^-\b=\b\]成立，此时$\A\x=\b$的通解为\[\x=\A^-\b+(\bs{E}_n-\A^-\A)\u,\ \ \ \forall\u\in\C^n\]
+\end{corollary}
+
+\subsubsection{相容方程的最小范数解}
+如果方程组$\A\x=\b$有解，那么就叫该方程组为相容的方程组，将所有解中最小的解称为\textbf{最小范数解},并且最小范数解是唯一的，证明过程可以利用勾股定理进行证明。
+\subsubsection{不相容方程组的解}
+如果方程组$\A\x=\b$无解，就叫该方程组为不相容方程组，此时，虽然没有解，但可以求出离理想结果最近的解，用数学语言描述就是：令$f(\x)=\Vert\A\x-\b\Vert_2^2$，存在$\x_0$使得$f(\x_0)$最小，这个时候称$\x_0$叫做方程组的最小二乘解
+
+不相容方程组$\A\x=\b$的最小二乘解的通解为\[\x=\G\b+(\bs{E}-\A^-\A)\u,\ \ \ \forall\u\in\C^n\]
+
+这个时候$\G\b=\A^+\b$记为方程组的最佳逼近解。
+\ifx\allfiles\undefined
+\end{document}
+\fi

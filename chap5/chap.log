@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.25)  7 JUL 2024 10:24
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.25)  2 JUL 2024 14:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/yinyanjiang/Desktop/研一下/矩阵理论/Matrix-Theory/chap0/chap
-(/Users/yinyanjiang/Desktop/研一下/矩阵理论/Matrix-Theory/chap0/chap.tex
+**/Users/yinyanjiang/Desktop/研一下/矩阵理论/Matrix-Theory/chap5/chap
+(/Users/yinyanjiang/Desktop/研一下/矩阵理论/Matrix-Theory/chap5/chap.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/ctexbook.cls (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/config/ctexbackend.cfg
 File: ctexbackend.cfg 2022/07/14 v2.5.10 Backend configuration file (CTEX)
@@ -1151,109 +1151,30 @@ Package hyperref Info: Link coloring ON on input line 5.
 \@outlinefile=\write4
 \openout4 = `chap.out'.
 
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
-
 \c@lstlisting=\count386
-(../config/cover.tex (../config/cover_text_0.tex)
-LaTeX Font Info:    Trying to load font information for U+msa on input line 1.
- (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 1.
- (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 1.
- (/usr/local/texlive/2023/texmf-dist/tex/latex/jknapltx/ursfs.fd
-File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
-LaTeX Font Info:    Trying to load font information for OMX+yhex on input line 1.
- (/usr/local/texlive/2023/texmf-dist/tex/latex/yhmath/OMXyhex.fd
-File: OMXyhex.fd 
-File: OMXyhex.fd 2013/07/03 v1.1 YH's humble contribution to TeX maths (NP)
-) [1
 
-
-] [1] (./chap.toc)
-\tf@toc=\write5
-\openout5 = `chap.toc'.
-
- [1
-
-])
-第零章
+第一章
 [1
 
-]
-File: ../figure/行列式.png Graphic file (type bmp)
-<../figure/行列式.png>
-File: ../figure/行列式2.png Graphic file (type bmp)
-<../figure/行列式2.png>
-LaTeX Font Info:    Font shape `TU/SongtiSCLight(0)/m/sl' in size <12> not available
-(Font)              Font shape `TU/SongtiSCLight(0)/m/it' tried instead on input line 43.
- [2]
-File: ../figure/平行四边形.png Graphic file (type bmp)
-<../figure/平行四边形.png>
- [3]
-File: ../figure/平行六面体.png Graphic file (type bmp)
-<../figure/平行六面体.png>
 
-Overfull \hbox (6.34195pt too wide) in paragraph at lines 76--82
-[]\TU/SongtiSCLight(0)/m/n/12 其 实，|  三 阶 行 列 式 的 几 何 意 义 即 为 是 一 个 由 三 个 三 维 向 量 $[] \OT1/cmr/m/n/12 = [] \OML/cmm/m/it/12 ; [] \OT1/cmr/m/n/12 = [\OML/cmm/m/it/12 a[]; a[];$ 
- []
+] (./chap.aux)
 
-[4]
+Package rerunfilecheck Warning: File `chap.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
 
-Package fontspec Warning: Font "STFangsong" does not contain requested Script
-(fontspec)                "CJK".
-
-
-Package fontspec Info: Could not resolve font "STFangsong/BI" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: Could not resolve font "STFangsong/B" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: Could not resolve font "STFangsong/I" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: Font family 'STFangsong(0)' created for font
-(fontspec)             'STFangsong' with options [Script={CJK}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"STFangsong/OT:language=dflt;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
-
-[5] [6] [7] [8] [9] [10] [11] [12] [13]
-Overfull \hbox (4.89995pt too wide) in paragraph at lines 484--485
-[]\TU/SongtiSCLight(0)/m/n/12 若 向 量 组 $\OML/cmm/m/it/12 a[]; a[]; []  ; a[]$ \TU/SongtiSCLight(0)/m/n/12 线 性 无 关，|  而 $\OML/cmm/m/it/12 ^^L; a[]; a[]; []  ; a[]$ \TU/SongtiSCLight(0)/m/n/12 线 性 相 关，|  则 $\OML/cmm/m/it/12 ^^L$ \TU/SongtiSCLight(0)/m/n/12 可 以 由 $\OML/cmm/m/it/12 a[]; a[]; []  ; a[]$
- []
-
-
-Overfull \hbox (3.29466pt too wide) in paragraph at lines 485--486
-[]\TU/SongtiSCLight(0)/m/n/12 如 果 向 量 组 $\OML/cmm/m/it/12 ^^L[]; ^^L[]; []  ; ^^L[]$ \TU/SongtiSCLight(0)/m/n/12 可 以 由 向 量 组 $\OML/cmm/m/it/12 a[]; a[]; []  ; a[]$ \TU/SongtiSCLight(0)/m/n/12 线 性 表 示，|  且 $\OML/cmm/m/it/12 t > s$\TU/lmr/m/n/12 , \TU/SongtiSCLight(0)/m/n/12 则 $\OML/cmm/m/it/12 ^^L[]; ^^L[]; []  ; ^^L[]$
- []
-
-[14] [15] [16] [17] [18] [19] [20] (./chap.aux)
-Package rerunfilecheck Info: File `chap.out' has not changed.
-(rerunfilecheck)             Checksum: 6A8E80DE3EA6B6E3D0906D071EC7B58C;2276.
+Package rerunfilecheck Info: Checksums for `chap.out':
+(rerunfilecheck)             Before: 7E968E9CBBA756CF2BF22C7C5377CF78;35
+(rerunfilecheck)             After:  87717FC078FEB9544435FCA738B947FE;75.
  )
-(\end occurred when \ifx on line 706 was incomplete) 
+(\end occurred when \ifx on line 11 was incomplete) 
 Here is how much of TeX's memory you used:
- 35587 strings out of 476683
- 812616 string characters out of 5804047
- 2128875 words of memory out of 5000000
- 55149 multiletter control sequences out of 15000+600000
- 530159 words of font info for 139 fonts, out of 8000000 for 9000
+ 34782 strings out of 476683
+ 774590 string characters out of 5804047
+ 2097875 words of memory out of 5000000
+ 54457 multiletter control sequences out of 15000+600000
+ 514393 words of font info for 48 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 98i,15n,97p,1318b,554s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,5n,97p,1318b,337s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on chap.pdf (23 pages).
+Output written on chap.pdf (1 page).
