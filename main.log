@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.25)  9 JUL 2024 00:17
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.25)  9 JUL 2024 17:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1382,32 +1382,35 @@ Missing character: There is no 😇 (U+1F607) in font [lmroman12-regular]:mappin
 
  (./chap4/chap.tex
 第四章
-) [69
+[69
 
 
 
 
-]
+] [70]
+File: figure//盖尔圆1.png Graphic file (type bmp)
+<figure//盖尔圆1.png>
+ [71] [72] [73] [74]) [75]
 \openout2 = `chap5/chap.aux'.
 
  (./chap5/chap.tex
 第五章
-[70
+[76
 
 
 
 
-] [71] [72] [73] [74] [75] [76] [77] [78]) [79]
+] [77] [78] [79] [80] [81] [82] [83] [84]) [85]
 \openout2 = `chap6/chap.aux'.
 
  (./chap6/chap.tex
 第六章
-[80
+[86
 
 
 
 
-] [81] [82] [83] [84] [85]
+] [87] [88] [89] [90] [91]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 143.
@@ -1620,7 +1623,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 143.
 
-[86] [87] [88] [89]
+[92] [93] [94] [95]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 230.
@@ -1837,7 +1840,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 230.
 
-[90] [91]
+[96] [97]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 272.
@@ -2262,7 +2265,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 273.
 
-[92]
+[98]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 313.
@@ -2475,7 +2478,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 313.
 
-[93] [94] [95]) [96] (./main.aux (./config/cover.aux) (./chap0/chap.aux) (./chap1/chap.aux) (./chap2/chap.aux) (./chap3/chap.aux) (./chap4/chap.aux) (./chap5/chap.aux) (./chap6/chap.aux))
+[99] [100] [101]) [102] (./main.aux (./config/cover.aux) (./chap0/chap.aux) (./chap1/chap.aux) (./chap2/chap.aux) (./chap3/chap.aux) (./chap4/chap.aux) (./chap5/chap.aux) (./chap6/chap.aux))
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
@@ -2485,16 +2488,16 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 367A6AE3A32025A4AFB2267FDA002E84;8385
-(rerunfilecheck)             After:  A619FF0474972710B0E3DC9143D93B2B;9377.
+(rerunfilecheck)             Before: A619FF0474972710B0E3DC9143D93B2B;9377
+(rerunfilecheck)             After:  7E56BBD270BA724E1462B732B884FBEB;10165.
  ) 
 Here is how much of TeX's memory you used:
- 36217 strings out of 476683
- 835003 string characters out of 5804047
- 2129844 words of memory out of 5000000
- 55699 multiletter control sequences out of 15000+600000
+ 36264 strings out of 476683
+ 836974 string characters out of 5804047
+ 2128846 words of memory out of 5000000
+ 55745 multiletter control sequences out of 15000+600000
  536283 words of font info for 164 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  98i,18n,97p,1309b,595s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (101 pages).
+Output written on main.pdf (107 pages).
