@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.25)  10 JUL 2024 23:44
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.25)  11 JUL 2024 00:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/yinyanjiang/Desktop/研一下/矩阵理论/Matrix-Theory/chap1/chap
-(/Users/yinyanjiang/Desktop/研一下/矩阵理论/Matrix-Theory/chap1/chap.tex
+**/Users/yinyanjiang/Desktop/研一下/矩阵理论/Matrix-Theory/chap7/chap
+(/Users/yinyanjiang/Desktop/研一下/矩阵理论/Matrix-Theory/chap7/chap.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/ctexbook.cls (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/config/ctexbackend.cfg
 File: ctexbackend.cfg 2022/07/14 v2.5.10 Backend configuration file (CTEX)
@@ -1154,53 +1154,37 @@ Package hyperref Info: Link coloring ON on input line 5.
 \c@lstlisting=\count386
 
 第一章
-[1
-
-
-]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 29.
- (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
+LaTeX Font Info:    Trying to load font information for U+msa on input line 18.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 29.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 18.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 29.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 18.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for OMX+yhex on input line 29.
+LaTeX Font Info:    Trying to load font information for OMX+yhex on input line 18.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/yhmath/OMXyhex.fd
 File: OMXyhex.fd 
 File: OMXyhex.fd 2013/07/03 v1.1 YH's humble contribution to TeX maths (NP)
-)
-Underfull \hbox (badness 10000) in paragraph at lines 39--40
+) [1
 
- []
 
-LaTeX Font Info:    Font shape `TU/SongtiSCLight(0)/m/sl' in size <12> not available
-(Font)              Font shape `TU/SongtiSCLight(0)/m/it' tried instead on input line 55.
-[2] [3] [4] [5]
-File: ../figure//直和分解——二维.png Graphic file (type bmp)
-<../figure//直和分解——二维.png>
-File: ../figure//直和分解——三维.png Graphic file (type bmp)
-<../figure//直和分解——三维.png>
- [6] [7] [8] [9] [10] [11] [12] [13] [14] [15]
-File: ../figure//投影.png Graphic file (type bmp)
-<../figure//投影.png>
- [16] [17] (./chap.aux)
+] [2] (./chap.aux)
 Package rerunfilecheck Info: File `chap.out' has not changed.
-(rerunfilecheck)             Checksum: 1CF23DDC076EC0FCBEC03B8ABF8654BD;2480.
+(rerunfilecheck)             Checksum: 54F7F1FE0AD4DDECCFD23D7376F40048;59.
  )
-(\end occurred when \ifx on line 441 was incomplete) 
+(\end occurred when \ifx on line 37 was incomplete) 
 Here is how much of TeX's memory you used:
- 35469 strings out of 476683
- 807001 string characters out of 5804047
- 2114875 words of memory out of 5000000
- 55064 multiletter control sequences out of 15000+600000
- 527040 words of font info for 116 fonts, out of 8000000 for 9000
+ 34970 strings out of 476683
+ 782976 string characters out of 5804047
+ 2126873 words of memory out of 5000000
+ 54608 multiletter control sequences out of 15000+600000
+ 520755 words of font info for 76 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 98i,14n,97p,1318b,561s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,5n,97p,1318b,338s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on chap.pdf (17 pages).
+Output written on chap.pdf (2 pages).

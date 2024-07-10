@@ -354,9 +354,90 @@ Jordan标准型有下面的几个结论（\textbf{一定要记住}）：
 \section{欧式空间上的度量}
 本节只介绍相关的定理和性质，不涉及具体证明，本节内容无非就是将之前所学过的熟知的一些性质放到向量空间中罢了。
 \begin{defn}{}{}
-    在线性空间$\V_n(\P)$上，若映射
+    在线性空间$\V_n(\P)$上，若映射\[\V_n(\P)\times \V_n(\P)\rightarrow\P\]
+    \begin{enumerate}
+        \item $<\x,\x>\geq 0;<\x,\x> =0$当且仅当$\x=0$
+        \item $<\x,\y>=\overline{<\y,\x>}, \forall \x,\y\in\V_n(\mathbb{P} )$
+        \item $<\lambda\x,\y>=\bar{\lambda}<\x,\y>,\forall \lambda\in\mathbb{P}, \forall \x,\y\in\V_n(\mathbb{P} )$
+        \item $<\x+\y,\z> =<\x,\z>+<\y,\z>,\ \forall \x,\y,\z\in\V_n(\mathbb{P} )$
+    \end{enumerate}
+    则称$<\x,\y>$是$\V_n(\mathbb{P} )$上的内积
 \end{defn}
+
+\begin{defn}{向量长度}{}
+    \[\Vert\x\Vert=\sqrt{<\x,\x>}\]
+\end{defn}
+\begin{defn}{向量之间的距离}{}
+    \[\Vert\x-\y\Vert\]
+\end{defn}
+\begin{defn}{向量正交}{}
+    \[<\x,\y> =0\]
+\end{defn}
+\begin{defn}{勾股定理}{}
+    \[\x\perp\y\rightarrow\Vert\x+\y\Vert^2=\Vert\x\Vert^2+\Vert\y\Vert^2\]
+\end{defn}
+\begin{them}{垂线段最短定理}{}
+    欧式空间$\V_n(R)$中的一个固定向量和一个子空间中各向量的距离“垂线最短”
+\end{them}
+
+\begin{defn}{Gram行列式}{}
+    \[\G(\alpha_1,\cdots,\alpha_k)=\begin{vmatrix}
+        <\alpha_1,\alpha_1>&<\alpha_1,\alpha_2>&\cdots&<\alpha_1,\alpha_k>\\
+        <\alpha_2,\alpha_1>&<\alpha_2,\alpha_2>&\cdots&<\alpha_2,\alpha_k>\\
+        \vdots&\vdots&&\vdots\\
+        <\alpha_k,\alpha_1>&<\alpha_k,\alpha_2>&\cdots&<\alpha_k,\alpha_k>\\
+    \end{vmatrix}\]
+\end{defn}
+\subsubsection{Gram行列式的性质}
+如果$n$维欧式空间$\V$中向量组$\alpha_1,\alpha_2,\cdots,\alpha_k$线性无关，则将向量组$\alpha_1,\alpha_2,\cdots,\alpha_k$正交化后，它的Gram行列式不变，即\[\G(\alpha_1,\alpha_2,\cdots,\alpha_k)=\G(\beta_1,\beta_2,\cdots,\beta_k)\]
+
+\begin{them}{}{}
+    设$\alpha_1,\alpha_2,\cdots,\alpha_k$是线性子空间$\V_1$的一组基，则向量$\alpha$给出的点到线性流形$\P=\alpha_0+\V_1$的距离$d$为\[d^2=\frac{\G(\alpha_1,\cdots,\alpha_k,\alpha-\alpha_0)}{\G(\alpha_1,\cdots,\alpha_k)}\]
+\end{them}
 \section{酉空间的分解与投影}
+\subsection{何为酉空间？}
+引用网上的一句话\footnote[1]{引用链接：https://zhuanlan.zhihu.com/p/29312940(虽然这篇文章里也是引的，但是实在懒得找源头了)}，可以十分简洁的回答出何为酉空间：
+
+欧几里得空间的定义：定义了内积的实线性空间。
+
+欧几里得空间定义推广到复线性空间就是酉空间。
+
+\subsection{何为投影？}
+投影这个概念并不陌生，在中学阶段就接触过投影，但那个时候接触到的投影大多数都是将其分解到$x$轴或者$y$轴这样，这其实是后面要介绍的一种比较特殊的投影——正交投影，其实，就如同分解一样，投影也可以不必正交。
+
+何为投影呢？用下面这个公式可以简洁说明：
+
+    假设有变换$T$，又有\[T(\alpha)=T(\beta+\gamma)=\beta\]那么\[T\circ T(\alpha)=T^2(\alpha)=T[T(\beta+\gamma)]=T(\beta)=\beta=T(\alpha)\]
+
+如果只写公式，这并不好理解，所以请看下面这幅图：
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{投影.png}
+\end{figure}
+
+图中，向量$\alpha$可以表示为$\beta$与$\gamma$的和，结合定义，变换$T$成功实现了将平面上的点沿着$\V_2$投影到了$\V_1$中，并把$\V_1$上的点变为$\V_1$上的同一点，因此，$T$的作用就可以把空间中的点限制到$\V_1$坐标轴中，这是一种恒等变换，具有$T^2=T$的性质，这就是投影。
+
+\begin{defn}{}{}
+    若变换满足$T^2=T\Leftrightarrow T$是$\V_n(\C)$上的投影
+\end{defn}
+
+投影满足下面的性质，这里只给出性质不给出证明，感兴趣的可以翻书看如何证明的
+\begin{enumerate}[leftmargin=4em]
+    \item 设$T$是$\V_n(\C)$上的投影，则\[\V_n(\C)=\bs{R}(T)\oplus \bs{N}(T)\]这里$\bs{R}(T)$叫做值域，$\bs{N}(T)$叫做核。
+    \item 设$\V_n(\C)=\V_1\oplus\V_2$，则存在投影$T$,使得\[R(T)=\V_1, N(T)=\V_2\]
+\end{enumerate}
+显然，上面两条性质互为逆。
+
+\subsection{正交投影}
+最后要介绍的就是正交投影了，这里就简单说一下
+\begin{defn}{}{}
+    设$T$是投影，若\[R^{\perp}(T)=N(T)\]则$T$是正交投影
+\end{defn}
+
+正交投影具有下面的性质：
+\begin{them}{}{}
+    设$\A\in\C^{n\times n},\A^2=\A$，则\[\A\text{是正交投影}\Leftrightarrow \A^H=\A\]
+\end{them}
 \ifx\allfiles\undefined
 \end{document}
 \fi

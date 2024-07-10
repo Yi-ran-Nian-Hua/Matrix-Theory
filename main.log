@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.25)  10 JUL 2024 15:15
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.25)  11 JUL 2024 00:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1177,11 +1177,11 @@ File: OMXyhex.fd 2013/07/03 v1.1 YH's humble contribution to TeX maths (NP)
 
 ] [1] (./main.toc [1
 
-] [2])
+] [2] [3])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [3] [4])
+ [4])
 \openout2 = `chap0/chap.aux'.
 
  (./chap0/chap.tex
@@ -1267,37 +1267,40 @@ File: figure//直和分解——二维.png Graphic file (type bmp)
 <figure//直和分解——二维.png>
 File: figure//直和分解——三维.png Graphic file (type bmp)
 <figure//直和分解——三维.png>
- [26] [27] [28]) [29]
+ [26] [27] [28] [29] [30] [31] [32] [33] [34] [35]
+File: figure//投影.png Graphic file (type bmp)
+<figure//投影.png>
+ [36]) [37]
 \openout2 = `chap2/chap.aux'.
 
  (./chap2/chap.tex
 第二章
-[30
+[38
 
 
 
 
-] [31] [32]
+] [39] [40]
 File: figure//平行四边形法则.png Graphic file (type bmp)
 <figure//平行四边形法则.png>
 File: figure//三角形法则.png Graphic file (type bmp)
 <figure//三角形法则.png>
- [33]
+ [41]
 File: figure//柯西不等式.png Graphic file (type bmp)
 <figure//柯西不等式.png>
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[34] [35]
+[42] [43]
 Missing character: There is no ， (U+FF0C) in font [lmroman12-regular]:mapping=tex-text;!
-[36] [37]
+[44] [45]
 File: figure//Young不等式.png Graphic file (type bmp)
 <figure//Young不等式.png>
- [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48]
+ [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56]
 File: figure//矩阵乘法.png Graphic file (type bmp)
 <figure//矩阵乘法.png>
- [49] [50] [51]
+ [57] [58] [59]
 
 LaTeX Warning: Command \textcircled invalid in math mode on input line 890.
 
@@ -1334,7 +1337,7 @@ LaTeX Warning: Command \textcircled invalid in math mode on input line 892.
 LaTeX Warning: Command \textcircled invalid in math mode on input line 892.
 
 Missing character: There is no 、 (U+3001) in font [lmroman12-regular]:mapping=tex-text;!
-[52]
+[60]
 
 LaTeX Warning: Command \textcircled invalid in math mode on input line 904.
 
@@ -1365,19 +1368,19 @@ LaTeX Warning: Command \textcircled invalid in math mode on input line 908.
 
 LaTeX Warning: Command \textcircled invalid in math mode on input line 908.
 
-[53] [54]
+[61] [62]
 Overfull \hbox (2.35112pt too wide) in paragraph at lines 994--995
 \TU/SongtiSCLight(0)/m/n/12 互 为 逆 矩 阵 从 而 导 出 矩 阵 相 似 的 性 质 进 行 推 导，|  将 上 面 的 两 种 情 况 合 成 在 一 起 就 是 定 理[][]\TU/lmr/m/n/12 2.2.1[][]\TU/SongtiSCLight(0)/m/n/12 中
  []
 
-[55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65]
+[63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73]
 Missing character: There is no 😇 (U+1F607) in font [lmroman12-regular]:mapping=tex-text;!
-[66] [67] [68] [69] [70] [71])
+[74] [75] [76] [77] [78] [79])
 \openout2 = `chap3/chap.aux'.
 
  (./chap3/chap.tex
 第三章
-[72
+[80
 
 
 
@@ -1391,40 +1394,40 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 66.
 
-[73] [74] [75]) [76]
+[81] [82] [83] [84] [85] [86] [87] [88]) [89]
 \openout2 = `chap4/chap.aux'.
 
  (./chap4/chap.tex
 第四章
-[77
+[90
 
 
 
 
-] [78]
+] [91]
 File: figure//盖尔圆1.png Graphic file (type bmp)
 <figure//盖尔圆1.png>
- [79] [80] [81] [82]) [83]
+ [92] [93] [94] [95]) [96]
 \openout2 = `chap5/chap.aux'.
 
  (./chap5/chap.tex
 第五章
-[84
+[97
 
 
 
 
-] [85] [86] [87] [88] [89] [90] [91] [92]) [93]
+] [98] [99] [100] [101] [102] [103] [104] [105]) [106]
 \openout2 = `chap6/chap.aux'.
 
  (./chap6/chap.tex
 第六章
-[94
+[107
 
 
 
 
-] [95] [96] [97] [98] [99]
+] [108] [109] [110] [111] [112]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 143.
@@ -1637,7 +1640,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 143.
 
-[100] [101] [102] [103]
+[113] [114] [115] [116]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 230.
@@ -1854,7 +1857,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 230.
 
-[104] [105]
+[117] [118]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 272.
@@ -2279,7 +2282,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 273.
 
-[106]
+[119]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 313.
@@ -2492,26 +2495,17 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 313.
 
-[107] [108] [109]) [110] (./main.aux (./config/cover.aux) (./chap0/chap.aux) (./chap1/chap.aux) (./chap2/chap.aux) (./chap3/chap.aux) (./chap4/chap.aux) (./chap5/chap.aux) (./chap6/chap.aux))
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 7E56BBD270BA724E1462B732B884FBEB;10165
-(rerunfilecheck)             After:  47CAD1CBA9F34CF98F3CA07743C66799;12072.
+[120] [121] [122]) [123] (./main.aux (./config/cover.aux) (./chap0/chap.aux) (./chap1/chap.aux) (./chap2/chap.aux) (./chap3/chap.aux) (./chap4/chap.aux) (./chap5/chap.aux) (./chap6/chap.aux))
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 3790D29258E3428DB04F287BC5C64C52;13752.
  ) 
 Here is how much of TeX's memory you used:
- 36310 strings out of 476683
- 838316 string characters out of 5804047
- 2128846 words of memory out of 5000000
- 55789 multiletter control sequences out of 15000+600000
+ 36402 strings out of 476683
+ 842022 string characters out of 5804047
+ 2128844 words of memory out of 5000000
+ 55880 multiletter control sequences out of 15000+600000
  536283 words of font info for 164 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  98i,18n,97p,1309b,595s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (116 pages).
+Output written on main.pdf (129 pages).

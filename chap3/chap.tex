@@ -107,6 +107,70 @@
 \end{them}
 
 \section{矩阵的谱分解}
+接下来了解一下矩阵的谱分解，矩阵的谱分解与矩阵的特征值与特征向量关系密切。
+\subsection{单纯矩阵的谱分解}
+在介绍单纯矩阵的谱分解前，需要明白何为单纯矩阵，而想要明白何为单纯矩阵，又需要了解下面的两个概念：代数重复度和几何重复度。
+\begin{defn}{代数重复度}{}
+设$\lambda_1,\lambda_2,\cdots,\lambda_k$是$\A\in\C^{n\times n}$的相异特征值，其重数分别为$r_1,r_2,\cdots,r_k$，则称$r_i$为矩阵$\A$的特征值$\lambda_i$的\textbf{代数重复度}。
+\end{defn}
+代数重复度与第一章提到的代数重数概念十分相似，其实他们就是一回事，如果能明白这个关系，下面的几何重复度理解起来也就没什么难度了。
+\begin{defn}{几何重复度}{}
+    齐次方程组$\A\x=\lambda_i\x\ (i=1,2,\cdots,k)$的解空间$\V_{\lambda_i}$称为$\A$的对应于特征值$\lambda_i$的特征空间，则$\V_{\lambda_i}$的维数称为$\A$的特征值$\lambda_i$的\textbf{几何重复度}。
+\end{defn}
+了解了这两个概念，接下来就要介绍何为单纯矩阵了：
+\begin{defn}{}{}
+    若矩阵$\A$的每个特征值的代数重复度与几何重复度相等，则称矩阵$\A$为\textbf{单纯矩阵}。
+\end{defn}
+
+在了解了何为单纯矩阵之后，接下来介绍何为单纯矩阵的谱分解：
+\begin{them}{单纯矩阵谱分解}{}
+    设$\A\in\C^{n\times n}$是单纯矩阵，则$\A$可分解为一系列幂等矩阵$\A_i\ (i=1,2,\cdots,n)$的加权和，即\[\A=\sum_{i=1}^{n}\lambda_i\A_i\]其中，$\lambda_i\ (i=1,2,\cdots,n)$是$\A$的特征值，并且$\A_i$还有如下的性质：
+    \begin{enumerate}
+        \item 幂等性：$\A_i^2=\A_i$
+        \item 分离性：$\A_i\A_j=0\ (i\neq j)$
+        \item 可加性：$\sum\limits_{i=1}^n\A_i=\bs{E}_n$
+    \end{enumerate}
+\end{them}
+
+这些性质的证明就略过了，感兴趣可以翻翻书。
+
+
+上面介绍的是如何把单纯矩阵进行谱分解，下面的定理说的就是谱分解中的矩阵$\A_i$与单纯矩阵之间的关系：
+\begin{them}{}{}
+    设$\A\in\C^{n\times n}$，它有$k$个相异特征值$\lambda_i\ (i=1,2,\cdots,k)$，则$\A$是单纯矩阵的充要条件是存在$k$个矩阵$\A_i\ (i=1,2,\cdots,k)$满足
+    \begin{enumerate}
+        \item $\A_i\A_j=\begin{cases}\A_i,&i=j\\0,&i\neq j\end{cases}$
+        \item $\sum_{i=1}^{k}\A_i=\bs{E}_n$
+        \item $\A=\sum_{i=1}^{k}\lambda_i\A_i$
+    \end{enumerate}
+\end{them}
+
+\subsection{正规矩阵及其分解}
+了解了单纯矩阵的分解之后，下面是正规矩阵的分解
+\begin{defn}{正规矩阵定义}{}
+    若$n$阶复矩阵$\A$满足\[\A\A^H=\A^H\A\]则称$\A$为\textbf{正规矩阵}。
+\end{defn}
+正规矩阵有下面的性质：
+\begin{enumerate}[leftmargin=4em]
+    \item 若$\A$为正规矩阵且$\A$与$\B$酉相似，则$\B$也为正规矩阵
+    \item (Schur定理)设$\A\in\C^{n\times n}$，则存在酉矩阵$\U$，使得\[\A=\U\R\U^H\]其中，$\R$是一个上三角矩阵且主对角线上的元素为$\A$的特征值。
+    \item 设$\A$是正规矩阵且是三角矩阵，则$\A$是对角矩阵。
+\end{enumerate}
+
+什么样的矩阵能够成为正规矩阵呢？
+\begin{them}{}{}
+    $n$阶复矩阵$\A$是正规矩阵的充要条件是$\A$与对角阵酉相似，即存在$n$阶酉矩阵$\U$，使得\[\A=\U diag(\lambda_1,\lambda_2,\cdots,\lambda_n)\U^H\]其中，$\lambda_1,\lambda_2,\cdots,\lambda_n$是$\A$的$n$个特征值。
+\end{them}
+或者可以用下面这个定理来判断：
+\begin{them}{}{}
+    设$\A\in\C^{n\times n}$，它有$k$个相异特征值$\lambda_i\ (i=1,2,\cdots,k)$，则$\A$是单纯矩阵的充要条件是存在$k$个矩阵$\A_i\ (i=1,2,\cdots,k)$满足
+    \begin{enumerate}
+        \item $\A_i\A_j=\begin{cases}\A_i,&i=j\\0,&i\neq j\end{cases}$
+        \item $\sum_{i=1}^{k}\A_i=\bs{E}_n$
+        \item $\A=\sum_{i=1}^{k}\lambda_i\A_i$
+        \item $\A_i^H=\A_i\ (i=1,2,\cdots,k)$
+    \end{enumerate}
+\end{them}
 
 \section{矩阵的满秩分解}
 \subsection{满秩分解的定义}
@@ -123,6 +187,56 @@
     \item 找到$\A$的一个极大线性无关组，这就是列满秩矩阵$\B$
     \item 在$\overset{\sim}{\A}$中的所有非零行构成矩阵$\D$
 \end{enumerate}
+
+\section{矩阵的奇异值分解}
+在本节的最后了解一下矩阵的奇异值分解，矩阵的奇异值分解常用来进行图像处理，对图像进行压缩，因此具有较为重要的应用场景。
+\subsection{为什么需要进行奇异值分解？}
+前面对于矩阵的分解，大多数都有要求，要求矩阵需要是方阵，这就又对矩阵的种类进行了限制，如果想要对于任意的矩阵进行分解，由第一节的最后一个定理可知，存在酉矩阵$\U,\V$和$r$阶上三角矩阵或者下三角矩阵$\bs{R}(L)$，使得\[\A=\U\begin{bmatrix}
+    \bs{R}&\bs{O}\\
+    \bs{O}&\bs{O}
+\end{bmatrix}\V\]
+但这样子依旧要求是方阵，奇异值分解就是在这个基础上而来。
+
+如何把一个矩阵变成方阵呢？这里采用的方法是研究$\A^H\A$，这的确变成了一个方阵，可为什么要这样处理呢？这就要给出下面的定理
+\begin{them}{}{}
+    设$\A\in\C^{m\times n}_r$，则有
+    \begin{enumerate}
+        \item $\rank(\A)=\rank(\A^H\A)=\rank(\A\A^H)$
+        \item $\A^H\A, \A\A^H$的特征值均为非负实数
+        \item $\A^H\A, \A\A^H$的非零特征值相同
+    \end{enumerate}
+\end{them}
+上面的定理是为下面矩阵的奇异值做铺垫，上面的这些定理仿佛在说：“我们可以用$\A^H\A$或者$\A\A^H$来研究$\A$”。
+
+\subsection{奇异值}
+\begin{defn}{}{}
+    设$\A\in\C^{m\times n}_r,\A^H\A$的特征值为\[\lambda_1\geq\lambda_2\geq\cdots\geq\lambda_{r+1}=\cdots=\lambda_n=0\]则称$\sigma_i=\sqrt{\lambda_i}\ (i=1,2,\cdots,r)$为$\A$的\textbf{正奇异值}。
+\end{defn}
+
+有了奇异值的概念之后，就有了下面奇异值分解的定理：
+\begin{them}{奇异值分解}{}
+    设$\A\in\C_r^{m\times n},\sigma_1,\sigma_2,\cdots,\sigma_r$是$\A$的$r$个正奇异值，则存在酉矩阵$\U\in\C^{m\times m}$和$\V\in\C^{n\times n}$，使得\[\A=\begin{bmatrix}
+        \D&\bs{O}\\
+        \bs{O}&\bs{O}
+    \end{bmatrix}\V\]其中,$\D=diag(\sigma_1,\sigma_2,\cdots,\sigma_r),|\sigma_i|=\sigma_i$
+\end{them}
+
+这个定理与第一节最后的定理很类似，不同之处就是将左上角的元素换成了对角矩阵。
+
+最后简单介绍一下酉等价的概念，以及两个酉等价矩阵的奇异值关系。
+\begin{defn}{}{}
+    设$\A,\B\in\C^{m\times n}$，如果存在酉矩阵$\U\in\C^{m\times m}$和$\V\in\C^{n\times n}$，使得\[\A=\U\B\V\]则称$\A$与$\B$酉等价，若两个矩阵酉等价，则他们有相同的正奇异值。
+\end{defn}
+\subsection{求矩阵奇异值分解的方法}
+求矩阵$\A$的奇异值分解的方法如下：
+\begin{enumerate}[leftmargin=4em]
+    \item 求$\A^H\A$的特征值以及特征向量
+    \item 构造酉矩阵$\V$
+    \item 构造酉矩阵$\U$
+    \item 给出矩阵$\A$的奇异值分解
+\end{enumerate}
+
+
 \ifx\allfiles\undefined
 \end{document}
 \fi
