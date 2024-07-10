@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.25)  2 JUL 2024 15:43
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.25)  10 JUL 2024 09:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1154,21 +1154,48 @@ Package hyperref Info: Link coloring ON on input line 5.
 \c@lstlisting=\count386
 
 第一章
-[1
+LaTeX Font Info:    Trying to load font information for U+msa on input line 27.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 27.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 27.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Trying to load font information for OMX+yhex on input line 27.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/yhmath/OMXyhex.fd
+File: OMXyhex.fd 
+File: OMXyhex.fd 2013/07/03 v1.1 YH's humble contribution to TeX maths (NP)
+) [1
 
 
-] (./chap.aux)
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 66.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 66.
+
+LaTeX Font Info:    Font shape `TU/SongtiSCLight(0)/m/sl' in size <12> not available
+(Font)              Font shape `TU/SongtiSCLight(0)/m/it' tried instead on input line 72.
+[2] [3] [4] [5] (./chap.aux)
 Package rerunfilecheck Info: File `chap.out' has not changed.
-(rerunfilecheck)             Checksum: 320220BE7730C0F4E19FB42AF2DAA113;193.
+(rerunfilecheck)             Checksum: D7B69312489DEE13E8C85B8BA6C01D89;1051.
  )
-(\end occurred when \ifx on line 25 was incomplete) 
+(\end occurred when \ifx on line 126 was incomplete) 
 Here is how much of TeX's memory you used:
- 34918 strings out of 476683
- 783193 string characters out of 5804047
- 2107875 words of memory out of 5000000
- 54588 multiletter control sequences out of 15000+600000
- 514433 words of font info for 53 fonts, out of 8000000 for 9000
+ 35154 strings out of 476683
+ 789346 string characters out of 5804047
+ 2114875 words of memory out of 5000000
+ 54769 multiletter control sequences out of 15000+600000
+ 527901 words of font info for 114 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 98i,5n,97p,1318b,337s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,14n,97p,1318b,532s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on chap.pdf (1 page).
+Output written on chap.pdf (5 pages).

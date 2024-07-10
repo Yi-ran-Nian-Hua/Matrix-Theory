@@ -21,7 +21,108 @@
 \textbf{注意：本节内容与上一章知识完全没有关系，但需要了解线性代数中对于矩阵的特征值、特征向量、实对称矩阵的性质等内容，如果遗忘了，请翻阅第零章的相关知识。}
 
 \section{矩阵的三角分解}
+\subsection{常见的三角矩阵及其性质}
+在开始本节内容之前，先来认识一下常见的三角矩阵
+    \begin{itemize}
+        \item 正线上三角阵\[\bs{R}=\begin{bmatrix}
+            a_{11}&a_{12}&\cdots&a_{1n}\\
+            0&a_{22}&\cdots&a_{2n}\\
+            \vdots&\vdots&&\vdots\\
+            0&0&\cdots&a_{nn}
+        \end{bmatrix}\]
+        \item 单位上三角阵\[\bs{R}=\begin{bmatrix}
+            1&a_{12}&\cdots&a_{1n}\\
+            0&1&\cdots&a_{2n}\\
+            \vdots&\vdots&&\vdots\\
+            0&0&\cdots&1
+        \end{bmatrix}\]
+        \item 正线下三角阵\[\bs{R}=\begin{bmatrix}
+            a_{11}&0&\cdots&0\\
+            a_{21}&a_{22}&\cdots&0\\
+            \vdots&\vdots&&\vdots\\
+            a_{n1}&a_{n2}&\cdots&a_{nn}
+        \end{bmatrix}\]
+        \item 单位下三角阵\[\bs{R}=\begin{bmatrix}
+            1&0&\cdots&0\\
+            a_{21}&a1&\cdots&0\\
+            \vdots&\vdots&&\vdots\\
+            a_{n1}&a_{n2}&\cdots&1
+        \end{bmatrix}\]
+    \end{itemize}
 
+    常见的三角矩阵具有下面的性质：
+    \begin{them}{三角阵的性质}{}
+        \begin{enumerate}
+            \item 上(下)三角矩阵$\bs{R}$的逆也为上(下)三角矩阵，对角元是原来元素的倒数。
+            \item 两个上(下)三角矩阵$\bs{R_1}, \bs{R_2}$的乘积$\bs{R_1R_2}$也是上(下)三角矩阵。
+            \item 酉矩阵$\U$的逆$\U^{-1}$也是酉矩阵。
+            \item 两个酉矩阵之积$\U_1\U_2$也是酉矩阵。
+        \end{enumerate}
+    \end{them}
+
+    牢记上面的性质，这些性质会在后面反复用到。
+
+
+    \subsection{$n$阶矩阵的三角分解}
+    \begin{them}{}{}
+        设$\A\in\C^{n\times n}_n$，则$\A$可以唯一的分解为\[\A=\U_1\bs{R}\]其中$\U_1$是酉矩阵，$\bs{R}$是正线上三角矩阵。
+
+        或$\A$可以唯一地分解为\[\A=\bs{L}\U_2\]其中$\bs{L}$是正线下三角矩阵，$\U_2$是酉矩阵
+    \end{them}
+
+    这就是$n$阶矩阵的三角分解。
+    证明过程//TODO，（后面如果没时间了就看看课本吧，这个证明可以看看）
+
+    除此之外，还有下面的推论：
+    \begin{corollary}{}{}
+        设$\A\in\R_{n}^{n\times n}$，则$\A$可以唯一地分解为\[\A=\bs{Q}_1\bs{R}\]其中，$\bs{Q}_1$是正交矩阵，$\bs{R}$是正线上三角矩阵。
+
+        或，$\A$可以唯一分解为\[\A=\bs{L}\bs{Q}_2\]其中，$\L$是正线下三角矩阵，$\Q_2$是正交矩阵.
+    \end{corollary}
+
+\begin{corollary}{}{}
+    设$\A$是实对称正定矩阵，则存在唯一的正线上三角矩阵，使得\[\A=\bs{R}^T\bs{R}\]
+\end{corollary}
+
+\begin{corollary}{}{}
+    设$\A$是正定Hermite矩阵，则存在唯一的正线上三角矩阵，使得\[\A=\bs{R}^H\bs{R}\]
+\end{corollary}
+证明省略，后面的不考，本小节结束。
+\subsection{任意矩阵的三角分解}
+\begin{them}{}{}
+    设$\A$为行满秩矩阵或者列满秩矩阵，则
+    \begin{itemize}
+        \item 设$\A\in\C^{m\times n}_n$，则存在$m$阶酉矩阵$\U$即$n$阶正线上三角矩阵$\bs{R}$，使得\[\A=\U\begin{bmatrix}
+            \bs{R}\\0
+        \end{bmatrix}\]
+        \item 设$\A\in\C^{m\times n}_m$，则存在$n$阶酉矩阵$\U$即$m$阶正线下三角矩阵$\bs{L}$，使得\[\A=(\L\ \ \ 0)\U\]
+    \end{itemize}
+\end{them}
+
+最后还有一个较为重要的在后面奇异值分解中会用到的定理：
+\begin{them}{}{}
+    设$\A\in\C^{m\times n}_r$，则存在酉矩阵$\U\in\mathbb{U}^{}m\times m$和$\V\in\mathbb{U}^{n\times n}$及$r$阶正线下三角矩阵$\L$，使得\[\A=\U\begin{bmatrix}
+        \L&0\\0&0
+    \end{bmatrix}\V\]
+\end{them}
+
+\section{矩阵的谱分解}
+
+\section{矩阵的满秩分解}
+\subsection{满秩分解的定义}
+在了解了矩阵的谱分解之后，再来看一种较为简单的分解——矩阵的满秩分解，也叫最大秩分解。
+\begin{them}{}{}
+    设$\A\in\C_r^{m\times n}$，则存在矩阵$\B\in\C_r^{m\times r}, \D\in\C_r^{r\times n}$，使得\[\A=\B\D\]
+\end{them}
+
+满秩分解很好理解，即，把一个矩阵分解成一个行满秩矩阵和一个列满秩矩阵相乘的形式即可。
+\subsection{满秩分解的步骤}
+对一个矩阵进行满秩分解的步骤如下：
+\begin{enumerate}[leftmargin=4em]
+    \item 进行初等行变换，化为\textbf{行最简阶梯形矩阵}$\overset{\sim}{\A}$
+    \item 找到$\A$的一个极大线性无关组，这就是列满秩矩阵$\B$
+    \item 在$\overset{\sim}{\A}$中的所有非零行构成矩阵$\D$
+\end{enumerate}
 \ifx\allfiles\undefined
 \end{document}
 \fi

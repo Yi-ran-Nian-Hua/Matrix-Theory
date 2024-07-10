@@ -124,7 +124,239 @@
 \end{rmk}
 
 \section{空间分解与维数定理}
-//TODO
+在中学阶段物理课程中，我们接触过力的分解，了解过一个矢量是可以进行分解的，同样也可以进行合成，这就是平行四边形法则或者三角形法则。
+
+在线性代数中，我们也了解过基向量的概念，也了解到了在空间中的一个向量其实就是一系列基向量合成而成，相对应的，一个空间中的向量也可以分解到各个构成他的基向量所在的空间中。
+
+为什么需要将向量，还有后面要涉及到的空间进行分解呢？答案是因为方便研究问题。
+
+本小节我们将目光再放远一些，了解一下空间的分解。
+
+\subsection{空间的和与维数定理}
+\begin{defn}{}{}
+    设$\V_1,\V_2$是线性空间$\V$的子空间，则$\V_1$与$\V_2$的和为\[\V_1+V_2=\{\alpha_1+\alpha_2|\forall \alpha_1\in\V_1,\forall\alpha_2\in\V_2\}\]
+\end{defn}
+这条定义其实就是说两个空间的和就相当于在这两个空间里面各自任取一个向量求和，最后的结果就是空间的和。
+
+两个空间求和之后生成的新空间，新空间的维数应该如何计算呢？这就是下面的维数定理。
+\begin{them}{维数定理}{}
+    设$\V_1$和$\V_2$是线性空间$\V$的子空间，则\[\dim(\V_1)+\dim(\V_2)=\dim(\V_1+\V_2)+\dim(\V_1\cap\V_2)\]
+\end{them}
+
+维数定理表明，两个空间求和之后，其维数应该等于各自的维数减掉公共部分的维数，这很好理解，相当于公共部分的维数被多加了一次，这类似于两个集合相加。
+
+说完了维数定理，接下来再来说一个新的概念——直和：
+\begin{defn}{}{}
+    设$\V_1$和$\V_2$是线性空间$\V$的子空间，弱队$\forall \alpha\in V_1+V_2$，有\[\alpha=\alpha_1+\alpha_2\ (\alpha_1\in \V_1, \alpha_2\in\V_2)\]且是唯一的，这个和$\V_1+\V_2$就被称为直和，记为$\V_1\oplus\V_2$
+\end{defn}
+
+如何理解直和呢？我们来看一个二维平面上的例子：
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{直和分解——二维.png}
+\end{figure}
+
+在这个例子中，向量$\alpha$沿着两条直线$l_1,l_2$分解成了两个部分，这个时候，假设$l_1$是固定的，那么$l_2$就一定固定且唯一（可以画一个三角形，两条边都确定了那第三边一定也是确定的），那么这个时候就可以说$l_1+l_2$构成的二维空间是直和，二维空间的分解具有唯一性。
+
+那事情到了三维空间，还是一样的吗？
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.3]{直和分解——三维.png}
+\end{figure}
+
+在三维空间中，假设有一个向量$\alpha$,在$\V_1$中的分量，那他在$\V_2$中的分量会有无数种，这就是说，三维空间的分解不具有唯一性。
+
+如果只利用直和的定义来判断直和是否成立有些太过麻烦，下面的定理能够方便我们判断直和：
+\begin{them}{}{}
+    设$\V_1, \V_2$是线性空间$\V$的子空间，则下列命题等价：
+    \begin{enumerate}
+        \item $\V_1+\V_2$是直和
+        \item 零向量的表示方法唯一
+        \item $\V_1\cap\V_2=\{\bs{0}\}$
+    \end{enumerate}
+\end{them}
+
+也就是说，如果两个空间没有相同的部分，那它们的和一定是直和，分解出的基向量也一定没有相同的，维数也就等于两个空间各自维数之和。这就类似于两个互不相交的集合，他们的和可以类比为空间的“直和”。
+
+前面所讲述的是两个空间内的直和，接下来给出一般情况下的直和及其性质：
+\begin{defn}{}{}
+    设$\V_1,\V_2,\cdots,\V_s$是线性空间$\V$的子空间，如果和$\V_1+\V_2+\cdots+\V_s$中的每个向量$\alpha$的分解式\[\alpha=\alpha_1+\alpha_2+\cdots+\alpha_s, \alpha_i\in\V_i\ \ \ (i=1,2,\cdots,s)\]是唯一的，这个和$\V_1+\V_2+\cdots+\V_s$就称为直和，记为\[\V_1\oplus\V_2\oplus\cdots\oplus\V_s\]
+\end{defn}
+
+\begin{them}{}{}
+    设$\V_1,\V_2,\cdots,\V_s$是线性空间$\V$的子空间，则下列命题相互等价：
+
+
+    \begin{enumerate}
+        \item $\bs{W}=\V_1+\V_2+\cdots+\V_s$是直和
+        \item 零向量的表示方法唯一
+        \item $\V_i\cap(\sum_{j\neq i}\V_j)=\{\bs{0}\}$
+        \item $\dim(\bs{W})=\sum\dim(\V_i)$
+    \end{enumerate}
+\end{them}
+
+\section{特征值与特征向量}
+本节课的内容虽然叫做“特征值与特征向量”，但内容并不只是简单的线性代数中介绍的特征值与特征向量，我们要更加深入理解特征值与特征向量这两个概念。
+\subsection{内容回顾}
+\subsubsection{特征值与特征向量}
+先来回顾一下线性代数中学到的特征值与特征向量：
+\begin{defn}{}{}
+    设$\A\in\mathbb{P}^{n\times n}, \alpha\in\mathbb{P}^n, \lambda\in\mathbb{P}$，若\[\A\alpha=\lambda\alpha\ (\alpha\neq 0)\]则称$\lambda$为$\A$的一个\textbf{特征值}，$\alpha$为$\A$对应于$\lambda$的一个\textbf{特征向量}。
+\end{defn}
+
+特征向量具有下面的性质：
+\begin{enumerate}[leftmargin=4em]
+    \item 设$\A\alpha=\lambda\alpha\ (\alpha\neq 0)$，则\[\A(k\alpha)=k(\A\alpha)=k(\lambda\alpha)=\lambda(k\alpha)\]
+    \item 设$\A\alpha_i=\lambda\alpha_i\ (i=1,2,\cdots,s)$，则\[\A(k_1\alpha_1+k_2\alpha_2+\cdots+k_s\alpha_s)=\lambda(k_1\alpha_1+k_2\alpha_2+\cdots+k_s\alpha_s)\]
+\end{enumerate}
+
+\subsubsection{特征子空间}
+对于所有的特征向量$\alpha$，设$\V_{\lambda}=\{\alpha|\A\alpha=\lambda\alpha, \alpha\in\R^n\}$，由特征值和特征向量的性质可知：
+\[\forall\alpha,\beta\in\V_{\lambda}, \alpha+\beta\in\V_{\lambda}\ \ \text{(加法封闭)}\]
+\[\forall\alpha\in\V_{\lambda},k\in\R,k\alpha\in\V_{\lambda}\ \ \text{(数乘封闭)}\]
+
+因此，可以把$\V_{\lambda}$称作一个空间，这个空间叫做$\A$的\textbf{特征子空间}。
+
+\subsection{谱、几何重数和代数重数}
+回顾了已经学过的知识之后，接下来就是新内容了，首先介绍几个基本概念
+\begin{defn}{}{}
+    $\A$的所有特征值的全体称为$\A$的\textbf{谱}，记为$\lambda(\A)$。
+\end{defn}
+\begin{defn}{}{}
+    我们把
+    \[|\lambda\bs{E}-\bs{A}|=(\lambda-\lambda_1)^{n_1}\cdots(\lambda-\lambda_r)^{n_r}\]叫做$\A$的特征多项式，$\sum\limits_{i=1}^{r}n_i=n$，这里$n_i$叫做特征值$\lambda_i$的\textbf{代数重数}。
+    
+    如果\[\rank(\lambda_i\bs{E}-\bs{A})=n-m_i\]$m_i$叫做$\lambda_i$的\textbf{几何重数}。
+\end{defn}
+
+几何重数与代数重数与后面Jordan标准型的内容紧密相关，代数重数就是特征方程中，该特征值的次数，几何重数与该特征值对应特征向量的特征矩阵的秩紧密相关。
+
+\subsection{对角化与Jordan标准型}
+在线性代数中，我们学过对一个矩阵进行相似对角化，了解了其步骤，并且了解能对一个矩阵进行相似对角化的条件。可现实中，能够对角化的矩阵毕竟是少数，将对角化的概念一般化，就是马上就要介绍的Jordan标准型。
+
+\subsubsection{Jordan块与Jordan标准型}
+\begin{them}{}{}
+    设$\A\subseteq \C^{n\times n}$有$r$个不同的特征值：$\lambda_1, \lambda_2, \cdots,\lambda_r$, 其代数重数分别为$n_1, n_2,\cdots,n_r$，则必存在可逆矩阵$\P\in\C^{n\times n}$，使得\[\P^{-1}\A\P=\J=diag(\J_1(\lambda_1),\cdots,\J_r(\lambda_r))\]其中，矩阵$\J$叫做$\A$的Jordan标准型，$\J_1(\lambda_1),\cdots,\J_r(\lambda_r)$，叫做一个Jordan块，其结构为\[\J_i(\lambda_i)=\begin{bmatrix}
+    \lambda_i&1&&\\
+    &\lambda_i&1&\\
+    &&\ddots&1\\
+    &&&\lambda_i
+    \end{bmatrix}\]
+\end{them}
+
+Jordan标准型有下面的几个结论（\textbf{一定要记住}）：
+\begin{enumerate}[leftmargin=4em]
+    \item Jordan块的个数$k$是线性无关特征向量的个数
+    \item 当且仅当$k=n$的时候矩阵可以对角化
+    \item 一个已知特征值的Jordan块个数是该特征值的几何重数，同时也是相应特征子空间的维数，一个已知特征值的Jordan块的阶数之和是该特征值的代数重数。
+    \item 特征值的几何重数小于等于其代数重数
+    \item 矩阵不同特征值对应的特征向量线性无关
+\end{enumerate}
+
+那Jordan标准型和矩阵对角化有什么样的关系呢？看下面的定理：
+\begin{them}{}{}
+    设$\A\subseteq \C^{n\times n}$，则下列命题等价：
+    \begin{itemize}
+        \item $\A$是可对角化矩阵
+        \item $\C^n$存在由$\A$的特征向量构成的一组基
+        \item $\A$的Jordan标准型中的Jordan块都是一阶的
+        \item $m_i=n_i\ (i=1,2,\cdots,r)$（代数重数=几何重数）
+    \end{itemize}
+\end{them}
+\subsection{特征值与特征向量的几何性质}
+\subsubsection{从线性变换开始说起}
+我们将线性空间到自身的映射称之为\textbf{变换}，如果在空间$\V$中存在变换$T$，并且满足\begin{enumerate}
+    \item $\forall\alpha,\beta\in\V, T(\alpha+\beta)=T(\alpha)+T(\beta)$
+    \item $\forall k\in \mathbb{P}, T(k\alpha)=kT(\alpha)$
+\end{enumerate}
+
+那么就成$T$是$\V$的\textbf{线性变换}。
+\subsubsection{线性变换的特征值}
+从纯数值上理解了特征值之后，接下来换一个角度，从线性变换的角度理解特征值与特征向量：
+\begin{defn}{}{}
+    设$T$是线性空间$V_n(C)$的一个线性变换，如果存在$\lambda\in\C$和非零向量$\xi\in\V_n(C)$，使得$T\xi=\lambda\xi$，则$\lambda$叫做$T$的特征值，$\xi$叫做$T$的属于特征值$\lambda$的特征向量。
+\end{defn}
+
+那这个线性变换的$T$与最开始从数值角度分析的特征值与特征向量的矩阵$\A$有何关系呢？下面推导一下。
+
+\subsubsection{线性变换与矩阵}
+我们假设$\V$是$n$维空间，$\varepsilon_1, \varepsilon_2,\cdots,\varepsilon_n$为该空间下的基，$T$为$\V$上的线性变换，则有\[T\varepsilon_1=\sum_{i=1}^{n}a_{i1}\varepsilon_i,\  T\varepsilon_2=\sum_{i=1}^{n}a_{i2}\varepsilon_2,\ \cdots,\ T\varepsilon_n=\sum_{i=1}^{n}a_{in}\varepsilon_n\]则有
+\[\begin{aligned}
+    T(\varepsilon_1,\varepsilon_2,\cdots,\varepsilon_n)&=(T\varepsilon_1,T\varepsilon_2,\cdots,T\varepsilon_n)\\
+    &=(\varepsilon_1, \varepsilon_2,\cdots,\varepsilon_n)\begin{bmatrix}
+        a_{11}&a_{12}&\cdots&a_{1n}\\
+        a_{21}&a_{22}&\cdots&a_{2n}\\
+        \vdots&\vdots&&\vdots\\
+        a_{n1}&a_{n2}&\cdots&a_{nn}
+    \end{bmatrix}\\
+    &=(\varepsilon_1,\varepsilon_2,\cdots,\varepsilon_n)\A
+\end{aligned}\]
+
+这里的矩阵$\A$称为线性变换$T$在基$\varepsilon_1, \varepsilon_2,\cdots,\varepsilon_n$下的\textbf{矩阵}。
+
+由此，我们从向量方程$T\xi=\lambda\xi$推出了矩阵方程$\A\x=\lambda\x$，反之，给定一个矩阵$\A$，也可以得出，在基底$\varepsilon_1, \varepsilon_2,\cdots,\varepsilon_n$下存在唯一的线性变换$T$与之对应。
+
+\section{初等矩阵、酉矩阵和酉变换}
+“初等矩阵”这个概念，我们在线性代数中学到过，可在这里，“初等矩阵”说的是：
+\begin{defn}{}{}
+    设$u,v\in\C^n,\sigma\in\C$，称\[\bs{E}(u,v,\sigma)=\bs{E}-\sigma \bs{uv}^H\]为初等矩阵
+\end{defn}
+在这里，我们把线性代数中的“初等矩阵”更名为“初等变换矩阵”。
+\begin{itemize}
+    \item $\bs{E}_{ij}=\bs{E}-(e_i-e_j)(e_i-e_j)^T=\bs{E}(e_i-e_j,e_i-e_j,1)$
+    \item $\bs{E}_{ij}(k)=\bs{E}+ke_je_i^T=\bs{E}(e_j,e_i,-k)$
+    \item $\bs{E}_i(k)=\bs{E}-(1-k)e_ie_i^T=\bs{E}(e_i,e_i,1-k)$
+\end{itemize}
+\subsection{初等矩阵的相关性质}
+接下来介绍初等矩阵的相关性质，具体的证明过程都省略掉了（不想写证明过程了），感兴趣的可以翻看课本。
+\subsubsection{初等矩阵的特征向量}
+\begin{itemize}
+    \item 当$u\perp v$时，设$u_1,u_2,\cdots,u_{n-1}$是与$u$垂直的空间（正交补子空间）的一组基，他们也是$\bs{E}(u,v,\sigma)$的$n-1$个线性无关的特征向量。
+    \item 若$u$不与$v$垂直时，设$u_1,u_2,\cdots,u_{n-1}$是与$u$垂直的空间（正交补子空间）的一组基，则$u, u_!,\cdots,u_{n-1}$是$\bs{E}$的$n$个无关特征向量。
+\end{itemize}
+
+\subsubsection{初等矩阵的特征值}
+\[\lambda(\bs{E}(u,v,\sigma))=\{1,1,\cdots,1,1-\sigma v^Hu\}\]
+\subsubsection{初等矩阵的行列式}
+\[\det(\bs{E}(u,v,\sigma))=1-\sigma v^Hu\]
+\subsubsection{初等矩阵的逆}
+\[\bs{E}(u,v,\sigma)^{-1}=\bs{E}(u,v,\frac{\sigma}{\sigma v^Hu-1}),\ (1-\sigma v^Hu\neq 0)\]
+\subsubsection{其他性质}
+非零向量$a,b,\in\C^n$，存在$u,v,\sigma$，使得\[\bs{E}(u,v,\sigma)a=b,\ (\sigma u=\frac{a-b}{v^Ha})\]
+\subsection{初等下三角阵}
+\begin{defn}{}{}
+    \[L_i(l_i)=\bs{E}(l_i,e_i,1)=\begin{bmatrix}
+        1&&&&&&\\
+        &\ddots&&&&\\
+        &&1&&&&\\
+        &&-l_{i+1,i}&\ddots&&\\
+        &&\vdots&&1&\\
+        &&-l_{n,i}&&&1
+    \end{bmatrix}\]
+其中
+
+\[\begin{cases}
+    l_i=(0,\cdots,0,l_{i+1},\cdots,l_{n,i})^T\\
+    e_i=(0,\cdots,0,1,0,\cdots,0)^T
+\end{cases}\]
+
+\[l_{k,i}=\frac{a_{k,i}}{a_{i,i}}(k=i+1,\cdots,n), \bs{E}(l_i,e_i,1)\A=\overset{\sim}{\A}\Rightarrow \overset{\sim}{a}_{k,i}=0\ (k=i+1,\cdots,n)\]
+\end{defn}
+
+\subsection{初等酉阵(Householder变换)}
+\begin{defn}{}{}
+    \[\H(u)=\bs{E}(u,u;2)=\bs{E}-2uu^H,\ (u^Hu=1)\]
+    \begin{enumerate}
+        \item $\H(u)^H=\H(u)-\H(u)^{-1}$
+        \item $\H(u)(a+ru)=a-ru,\ \forall a\in u^{\perp}, r\in\C$（镜像变换）
+    \end{enumerate}
+\end{defn}
+\section{欧式空间上的度量}
+本节只介绍相关的定理和性质，不涉及具体证明，本节内容无非就是将之前所学过的熟知的一些性质放到向量空间中罢了。
+\begin{defn}{}{}
+    在线性空间$\V_n(\P)$上，若映射
+\end{defn}
+\section{酉空间的分解与投影}
 \ifx\allfiles\undefined
 \end{document}
 \fi

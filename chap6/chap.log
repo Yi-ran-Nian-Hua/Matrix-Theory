@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.25)  8 JUL 2024 17:25
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.25)  10 JUL 2024 15:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1151,8 +1151,11 @@ Package hyperref Info: Link coloring ON on input line 5.
 \@outlinefile=\write4
 \openout4 = `chap.out'.
 
-\c@lstlisting=\count386
 
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
+\c@lstlisting=\count386
 第一章
 LaTeX Font Info:    Trying to load font information for U+msa on input line 16.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -2245,15 +2248,18 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 313.
 
 [14] [15] [16] [17] (./chap.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `chap.out' has not changed.
 (rerunfilecheck)             Checksum: 78DCC5C6B94385EC3F0123552430C839;2751.
  )
 (\end occurred when \ifx on line 368 was incomplete) 
 Here is how much of TeX's memory you used:
- 35211 strings out of 476683
- 789539 string characters out of 5804047
+ 35212 strings out of 476683
+ 789552 string characters out of 5804047
  2114875 words of memory out of 5000000
- 54817 multiletter control sequences out of 15000+600000
+ 54818 multiletter control sequences out of 15000+600000
  533738 words of font info for 140 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  98i,14n,97p,1318b,559s stack positions out of 10000i,1000n,20000p,200000b,200000s

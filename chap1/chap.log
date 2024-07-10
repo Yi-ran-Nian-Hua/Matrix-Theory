@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.25)  19 JUN 2024 09:48
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.25)  10 JUL 2024 19:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1181,18 +1181,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
 LaTeX Font Info:    Font shape `TU/SongtiSCLight(0)/m/sl' in size <12> not available
 (Font)              Font shape `TU/SongtiSCLight(0)/m/it' tried instead on input line 55.
-[2] [3] [4] [5] (./chap.aux)
+[2] [3] [4] [5]
+File: ../figure//直和分解——二维.png Graphic file (type bmp)
+<../figure//直和分解——二维.png>
+File: ../figure//直和分解——三维.png Graphic file (type bmp)
+<../figure//直和分解——三维.png>
+ [6] [7] [8] [9] [10] [11] [12] [13] [14] (./chap.aux)
 Package rerunfilecheck Info: File `chap.out' has not changed.
-(rerunfilecheck)             Checksum: AE04FC31900E1FF6B8750DEC5EF8E71E;545.
+(rerunfilecheck)             Checksum: 9BCAF9A2B8B972632CD686F72ABACADD;2174.
  )
-(\end occurred when \ifx on line 128 was incomplete) 
+(\end occurred when \ifx on line 360 was incomplete) 
 Here is how much of TeX's memory you used:
- 35264 strings out of 476683
- 798186 string characters out of 5804047
+ 35386 strings out of 476683
+ 803725 string characters out of 5804047
  2114875 words of memory out of 5000000
- 54878 multiletter control sequences out of 15000+600000
+ 54990 multiletter control sequences out of 15000+600000
  523631 words of font info for 99 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 98i,10n,97p,1318b,543s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,14n,97p,1318b,561s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on chap.pdf (5 pages).
+Output written on chap.pdf (14 pages).
